@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+drift,HDDMWeighted,10,3.100148133933544,0.3100148133933544,0.007117595770151721,0.0457894655125183

@@ -1,0 +1,9 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+pamap2D,0,[0],254136,34388,26,26
+pamap2D,1,[1],251323,37201,26,26
+pamap2D,2,[2],253656,34868,26,26
+pamap2D,3,[3],252286,36238,26,26
+pamap2D,4,[4],250681,37843,26,26
+pamap2D,5,[5],252555,35969,26,26
+pamap2D,6,[6],252988,35536,26,26
+pamap2D,7,[7],252043,36481,26,26

@@ -1,0 +1,17 @@
+{
+    "scenario": "drift",
+    "detector_name": "HDDMAverage",
+    "best_macro_f1": 0.6215075654997577,
+    "best_params": {
+        "phi_b": 1.4113065538148322e-05,
+        "scaler_detectors": "robust",
+        "scaler_model": "robust",
+        "rf_n_estimators": 67,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 4,
+        "rf_min_samples_leaf": 6,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "fixed_catch24_window_size": null
+}

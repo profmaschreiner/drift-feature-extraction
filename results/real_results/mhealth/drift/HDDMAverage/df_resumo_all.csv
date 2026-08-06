@@ -1,0 +1,2 @@
+run,f1_macro_mean,f1_macro_std,accuracy_mean,accuracy_std,n_features_modelo
+HDDMAverage,0.8230364713070705,0.08379716123879806,0.8385116677768704,0.07740050465121835,24

@@ -1,0 +1,153 @@
+{
+    "scenario": "CUSUM",
+    "best_value_mean_f1_macro": 0.712781525669126,
+    "best_params": {
+        "phi_b": 0.00010849855986084896,
+        "scaler_detectors": "standard",
+        "rf_n_estimators": 87,
+        "rf_max_depth": 7,
+        "rf_min_samples_split": 2,
+        "rf_min_samples_leaf": 4,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "fold_scores": [
+        {
+            "fold": 0,
+            "f1_macro": 0.7443986639349708,
+            "f1_mean_classes": 0.7443986639349708,
+            "accuracy": 0.7845970240211264,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 1,
+            "f1_macro": 0.7945914467744568,
+            "f1_mean_classes": 0.7945914467744568,
+            "accuracy": 0.8667708100870342,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 2,
+            "f1_macro": 0.780195649461159,
+            "f1_mean_classes": 0.780195649461159,
+            "accuracy": 0.8359685836821165,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 3,
+            "f1_macro": 0.6577805795590217,
+            "f1_mean_classes": 0.6577805795590217,
+            "accuracy": 0.718335249242345,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 4,
+            "f1_macro": 0.7809243421196823,
+            "f1_mean_classes": 0.7809243421196823,
+            "accuracy": 0.8546271716561096,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 5,
+            "f1_macro": 0.6591745514794668,
+            "f1_mean_classes": 0.6591745514794668,
+            "accuracy": 0.7326089909004482,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 6,
+            "f1_macro": 0.5770483386388826,
+            "f1_mean_classes": 0.5770483386388826,
+            "accuracy": 0.6261114662637299,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 7,
+            "f1_macro": 0.7064670605236597,
+            "f1_mean_classes": 0.7064670605236597,
+            "accuracy": 0.7826134469852198,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 8,
+            "f1_macro": 0.5927203280422159,
+            "f1_mean_classes": 0.5927203280422159,
+            "accuracy": 0.6235216819973719,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 9,
+            "f1_macro": 0.8345142961577452,
+            "f1_mean_classes": 0.8345142961577452,
+            "accuracy": 0.8951749734888653,
+            "n_features_modelo": 24
+        }
+    ],
+    "f1_por_classe_summary": [
+        {
+            "classe": 0,
+            "f1_medio": 0.2920267368042492,
+            "f1_desvio": 0.10486814524400391
+        },
+        {
+            "classe": 1,
+            "f1_medio": 0.7203744571528878,
+            "f1_desvio": 0.3620559171560294
+        },
+        {
+            "classe": 2,
+            "f1_medio": 0.656605248608184,
+            "f1_desvio": 0.36521769260257375
+        },
+        {
+            "classe": 3,
+            "f1_medio": 0.8671853514504793,
+            "f1_desvio": 0.298749893114737
+        },
+        {
+            "classe": 4,
+            "f1_medio": 0.8477127991363009,
+            "f1_desvio": 0.2854680350295988
+        },
+        {
+            "classe": 5,
+            "f1_medio": 0.6705527043867835,
+            "f1_desvio": 0.34489067943750146
+        },
+        {
+            "classe": 6,
+            "f1_medio": 0.8957983061821162,
+            "f1_desvio": 0.17617019668006154
+        },
+        {
+            "classe": 7,
+            "f1_medio": 0.9247604422502654,
+            "f1_desvio": 0.05121837399506096
+        },
+        {
+            "classe": 8,
+            "f1_medio": 0.8737111341980712,
+            "f1_desvio": 0.0949772200742479
+        },
+        {
+            "classe": 9,
+            "f1_medio": 0.9054961576992253,
+            "f1_desvio": 0.12368076118558749
+        },
+        {
+            "classe": 10,
+            "f1_medio": 0.7928044745804745,
+            "f1_desvio": 0.1708884599848704
+        },
+        {
+            "classe": 11,
+            "f1_medio": 0.7220624866039909,
+            "f1_desvio": 0.2841323282585736
+        },
+        {
+            "classe": 12,
+            "f1_medio": 0.09706953464561077,
+            "f1_desvio": 0.14767027492393967
+        }
+    ]
+}

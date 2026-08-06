@@ -1,0 +1,2 @@
+run,f1_macro_mean,f1_macro_std,accuracy_mean,accuracy_std,n_features_modelo
+GeometricMovingAverage,0.5951874157455815,0.18225725944023527,0.6773339451532148,0.19275032086316018,24

@@ -1,0 +1,2 @@
+phi_b,scaler_detectors,rf_n_estimators,rf_max_depth,rf_min_samples_split,rf_min_samples_leaf,rf_max_features,rf_bootstrap,best_value_mean_f1_macro
+0.00014012042506722516,minmax,76,10,12,8,log2,True,0.6341196556250591

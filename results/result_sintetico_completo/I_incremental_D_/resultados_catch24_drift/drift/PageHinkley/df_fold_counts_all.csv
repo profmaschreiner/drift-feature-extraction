@@ -1,0 +1,13 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+I_incremental_D_,0,[0],40884,3648,8,8
+I_incremental_D_,1,[1],40908,3624,8,8
+I_incremental_D_,2,[2],40896,3636,8,8
+I_incremental_D_,3,[3],40800,3732,8,8
+I_incremental_D_,4,[4],40800,3732,8,8
+I_incremental_D_,5,[5],40764,3768,8,8
+I_incremental_D_,6,[6],40704,3828,8,8
+I_incremental_D_,7,[7],40896,3636,8,8
+I_incremental_D_,8,[8],40884,3648,8,8
+I_incremental_D_,9,[9],40776,3756,8,8
+I_incremental_D_,10,[10],40716,3816,8,8
+I_incremental_D_,11,[11],40824,3708,8,8

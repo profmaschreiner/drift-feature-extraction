@@ -1,0 +1,13 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+D_recorrente_D_,0,[0],62175,5584,8,8
+D_recorrente_D_,1,[1],62040,5719,8,8
+D_recorrente_D_,2,[2],62076,5683,8,8
+D_recorrente_D_,3,[3],62423,5336,8,8
+D_recorrente_D_,4,[4],62070,5689,8,8
+D_recorrente_D_,5,[5],62020,5739,8,8
+D_recorrente_D_,6,[6],62071,5688,8,8
+D_recorrente_D_,7,[7],62049,5710,8,8
+D_recorrente_D_,8,[8],62093,5666,8,8
+D_recorrente_D_,9,[9],62036,5723,8,8
+D_recorrente_D_,10,[10],62292,5467,8,8
+D_recorrente_D_,11,[11],62004,5755,8,8

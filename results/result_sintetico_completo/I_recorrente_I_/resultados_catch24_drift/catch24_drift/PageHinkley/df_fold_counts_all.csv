@@ -1,0 +1,13 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+I_recorrente_I_,0,[0],53153,4851,104,104
+I_recorrente_I_,1,[1],53217,4787,104,104
+I_recorrente_I_,2,[2],53281,4723,104,104
+I_recorrente_I_,3,[3],53185,4819,104,104
+I_recorrente_I_,4,[4],53057,4947,104,104
+I_recorrente_I_,5,[5],53233,4771,104,104
+I_recorrente_I_,6,[6],53153,4851,104,104
+I_recorrente_I_,7,[7],53217,4787,104,104
+I_recorrente_I_,8,[8],53313,4691,104,104
+I_recorrente_I_,9,[9],53041,4963,104,104
+I_recorrente_I_,10,[10],53137,4867,104,104
+I_recorrente_I_,11,[11],53057,4947,104,104

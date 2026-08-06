@@ -1,0 +1,22 @@
+{
+    "scenario": "catch24_drift_ot",
+    "detector_name": "GeometricMovingAverage",
+    "best_macro_f1": 0.5221769663769351,
+    "best_params": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 152,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 8,
+        "rf_min_samples_leaf": 9,
+        "rf_max_features": "log2",
+        "rf_bootstrap": true
+    },
+    "detector_params": {
+        "lambda_": 0.5263524881591508,
+        "min_n_instances": 25,
+        "alpha": 0.9201523925904593
+    },
+    "fixed_phi_b": 0.0021240037947768825,
+    "fixed_scaler_detectors": "robust",
+    "fixed_catch24_window_size": 130
+}

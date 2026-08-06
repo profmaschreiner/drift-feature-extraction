@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+catch24_drift,KSWIN,10,23.649516293779016,2.3649516293779014,0.032856308425766007,0.08934797798851114

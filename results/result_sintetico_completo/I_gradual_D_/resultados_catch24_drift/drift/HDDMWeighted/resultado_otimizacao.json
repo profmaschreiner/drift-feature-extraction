@@ -1,0 +1,17 @@
+{
+    "scenario": "drift",
+    "detector_name": "HDDMWeighted",
+    "best_macro_f1": 0.23776328888550624,
+    "best_params": {
+        "phi_b": 0.004827513143598665,
+        "scaler_detectors": "minmax",
+        "scaler_model": "minmax",
+        "rf_n_estimators": 200,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 8,
+        "rf_min_samples_leaf": 6,
+        "rf_max_features": null,
+        "rf_bootstrap": true
+    },
+    "fixed_catch24_window_size": null
+}

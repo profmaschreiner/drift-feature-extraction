@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+catch24,,10,482.69783701747656,48.269783701747656,0.5468874557144761,0.09342456958186027

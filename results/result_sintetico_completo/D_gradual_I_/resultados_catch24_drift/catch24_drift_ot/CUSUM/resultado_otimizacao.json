@@ -1,0 +1,22 @@
+{
+    "scenario": "catch24_drift_ot",
+    "detector_name": "CUSUM",
+    "best_macro_f1": 0.3464725913459629,
+    "best_params": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 66,
+        "rf_max_depth": 2,
+        "rf_min_samples_split": 14,
+        "rf_min_samples_leaf": 7,
+        "rf_max_features": "log2",
+        "rf_bootstrap": false
+    },
+    "detector_params": {
+        "lambda_": 5.474870316333018,
+        "delta": 0.00019527754116117072,
+        "min_n_instances": 22
+    },
+    "fixed_phi_b": 0.014591098815719305,
+    "fixed_scaler_detectors": "standard",
+    "fixed_catch24_window_size": 130
+}

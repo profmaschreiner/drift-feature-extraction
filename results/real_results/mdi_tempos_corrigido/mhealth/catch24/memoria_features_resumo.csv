@@ -1,0 +1,2 @@
+scenario,detector,n_folds,n_cols_features,mem_X_train_mb_mean,mem_X_train_mb_std,mem_X_train_mb_max,mem_X_train_mb_min,mem_X_test_mb_mean,mem_X_test_mb_std,mem_X_test_mb_max,mem_X_test_mb_min,mem_catch22_cache_mb
+catch24,,10,288,734.9505409240722,3.251587792572683,741.1466102600098,730.2305946350098,81.66128311157226,3.2515877925726833,86.38122940063477,75.46521377563477,816.6128311157227

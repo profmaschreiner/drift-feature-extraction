@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,chest_mag_y,0.18485250063623737
+catch24,,chest_mag_y__mean,0.041876677874444615
+drift,GeometricMovingAverage,score_chest_acc16_y,0.161661333754054
+catch24_drift,GeometricMovingAverage,score_chest_acc6_y,0.06039853603010731

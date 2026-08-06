@@ -1,0 +1,8 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+usc_had,0,"[0, 1]",487298,73250,144,144
+usc_had,1,"[2, 3]",501784,58764,144,144
+usc_had,2,"[4, 5]",501065,59483,144,144
+usc_had,3,"[6, 7]",492501,68047,144,144
+usc_had,4,"[8, 9]",458777,101771,144,144
+usc_had,5,"[10, 11]",454352,106196,144,144
+usc_had,6,"[12, 13]",467511,93037,144,144

@@ -1,0 +1,20 @@
+{
+    "fold": 1,
+    "train_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "test_indices": [
+        1
+    ],
+    "detector_name": "ADWIN",
+    "phi_b": 0.003204888885341091,
+    "scaler_name": "standard"
+}

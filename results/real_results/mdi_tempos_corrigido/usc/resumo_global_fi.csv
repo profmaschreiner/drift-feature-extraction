@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,acc_x,0.35849640234458247
+catch24,,gyro_x__mean,0.07668678183409848
+drift,PageHinkley,score_gyro_z,0.24118415482406372
+catch24_drift,PageHinkley,score_gyro_z,0.09093658525222054

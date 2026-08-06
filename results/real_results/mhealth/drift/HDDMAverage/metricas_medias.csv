@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+HDDMAverage,0.8230364713070705,0.8385116677768704,0.8230364713070705,0.8230364713070705

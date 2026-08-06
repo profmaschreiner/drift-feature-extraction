@@ -1,0 +1,2 @@
+run,f1_macro_mean,f1_macro_std,accuracy_mean,accuracy_std,n_features_modelo
+baseline,0.5127409349967298,0.13449860975761152,0.5611947757002513,0.14146707466060984,12

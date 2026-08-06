@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_scaler_total_s,t_deteccao_total_s,t_extracao_treino_total_s,t_extracao_teste_total_s,t_catch22_extracao_unica_s,t_total_extracao_todos_folds_s,t_total_extracao_mean_s,t_total_extracao_std_s,t_por_amostra_treino_ms_mean,t_por_amostra_teste_ms_mean
+drift,HDDMAverage,10,1.0479377303272486,314.9122676067054,33.46891354210675,3.733985183760524,0.0,353.16310406289995,35.31631040628999,0.10799237976236081,0.009987607545270082,0.010027026322624776

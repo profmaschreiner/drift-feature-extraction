@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,alz,0.11573629367339891
+catch24,,aly__mean,0.05045374425260208
+drift,HDDMAverage,score_aly,0.12060754087534807
+catch24_drift,HDDMAverage,aly__mean,0.034102261897776626

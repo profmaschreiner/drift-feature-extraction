@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+ADWIN,0.6908395196902175,0.7368230783641507,0.6908395196902175,0.6908395196902175

@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+catch24_drift,HDDMAverage,10,912.1057637445629,91.21057637445628,0.6667388371533128,0.27291252521569503

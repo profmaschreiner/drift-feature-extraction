@@ -1,0 +1,13 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+I_gradual_I_,0,[0],40572,3708,8,8
+I_gradual_I_,1,[1],40680,3600,8,8
+I_gradual_I_,2,[2],40560,3720,8,8
+I_gradual_I_,3,[3],40464,3816,8,8
+I_gradual_I_,4,[4],40656,3624,8,8
+I_gradual_I_,5,[5],40668,3612,8,8
+I_gradual_I_,6,[6],40560,3720,8,8
+I_gradual_I_,7,[7],40644,3636,8,8
+I_gradual_I_,8,[8],40584,3696,8,8
+I_gradual_I_,9,[9],40512,3768,8,8
+I_gradual_I_,10,[10],40644,3636,8,8
+I_gradual_I_,11,[11],40536,3744,8,8

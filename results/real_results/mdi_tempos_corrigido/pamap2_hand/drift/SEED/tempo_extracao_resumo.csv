@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_scaler_total_s,t_deteccao_total_s,t_extracao_treino_total_s,t_extracao_teste_total_s,t_catch22_extracao_unica_s,t_total_extracao_todos_folds_s,t_total_extracao_mean_s,t_total_extracao_std_s,t_por_amostra_treino_ms_mean,t_por_amostra_teste_ms_mean
+drift,SEED,8,0.36838595010340214,235.58283080160618,20.570637170225382,2.938863070681691,0.0,259.46071699261665,32.43258962407708,0.15255700895549157,0.010185236328610589,0.01018384980136984

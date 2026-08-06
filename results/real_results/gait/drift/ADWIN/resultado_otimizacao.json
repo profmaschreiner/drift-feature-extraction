@@ -1,0 +1,17 @@
+{
+    "scenario": "drift",
+    "detector_name": "ADWIN",
+    "best_macro_f1": 0.9919058337670329,
+    "best_params": {
+        "phi_b": 1.2450212297603323e-05,
+        "scaler_detectors": "standard",
+        "scaler_model": "standard",
+        "rf_n_estimators": 90,
+        "rf_max_depth": 4,
+        "rf_min_samples_split": 20,
+        "rf_min_samples_leaf": 6,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": false
+    },
+    "fixed_catch24_window_size": null
+}

@@ -1,0 +1,21 @@
+{
+    "scenario": "catch24_drift_ot",
+    "detector_name": "EWMAChart",
+    "best_macro_f1": 0.537830570934705,
+    "best_params": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 95,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 6,
+        "rf_min_samples_leaf": 15,
+        "rf_max_features": "log2",
+        "rf_bootstrap": false
+    },
+    "detector_params": {
+        "lambda_": 0.29183536516316194,
+        "min_n_instances": 23
+    },
+    "fixed_phi_b": 0.01040502101319117,
+    "fixed_scaler_detectors": "standard",
+    "fixed_catch24_window_size": 130
+}

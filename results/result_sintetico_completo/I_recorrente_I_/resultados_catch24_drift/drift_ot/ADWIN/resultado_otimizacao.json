@@ -1,0 +1,31 @@
+{
+    "scenario": "drift_ot",
+    "detector_name": "ADWIN",
+    "best_macro_f1": 0.2542651468621166,
+    "best_params": {
+        "phi_b": 1.255973724960315e-05,
+        "scaler_detectors": "minmax",
+        "adwin_delta": 0.0001409801621355177,
+        "adwin_clock": 44,
+        "adwin_max_buckets": 9,
+        "adwin_min_window_length": 12,
+        "adwin_grace_period": 27,
+        "scaler_model": "minmax",
+        "rf_n_estimators": 66,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 18,
+        "rf_min_samples_leaf": 14,
+        "rf_max_features": null,
+        "rf_bootstrap": false
+    },
+    "detector_params": {
+        "delta": 0.0001409801621355177,
+        "clock": 44,
+        "max_buckets": 9,
+        "min_window_length": 12,
+        "grace_period": 27
+    },
+    "fixed_phi_b": null,
+    "fixed_scaler_detectors": null,
+    "fixed_catch24_window_size": null
+}

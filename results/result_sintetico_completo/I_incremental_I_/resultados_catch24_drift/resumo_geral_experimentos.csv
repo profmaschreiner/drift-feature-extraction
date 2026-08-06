@@ -1,0 +1,10 @@
+scenario,detector_name,best_macro_f1
+catch24_drift,ADWIN,0.2574385523353519
+catch24_drift,PageHinkley,0.27008748122667486
+catch24_drift,KSWIN,0.22907746667853143
+catch24_drift,CUSUM,0.24238245993839638
+catch24_drift,EWMAChart,0.27317555605892235
+catch24_drift,GeometricMovingAverage,0.227559897944409
+catch24_drift,HDDMAverage,0.23068773232750084
+catch24_drift,HDDMWeighted,0.22902603530897558
+catch24_drift,SEED,0.22758386000419692

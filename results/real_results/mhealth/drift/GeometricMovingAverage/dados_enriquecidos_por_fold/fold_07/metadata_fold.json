@@ -1,0 +1,20 @@
+{
+    "fold": 7,
+    "train_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+    ],
+    "test_indices": [
+        7
+    ],
+    "detector_name": "GeometricMovingAverage",
+    "phi_b": 0.0007128506213937577,
+    "scaler_name": "robust"
+}

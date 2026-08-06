@@ -1,0 +1,27 @@
+{
+    "scenario": "drift_ot",
+    "detector_name": "CUSUM",
+    "best_macro_f1": 0.2666291784062224,
+    "best_params": {
+        "phi_b": 0.0011618722322058366,
+        "scaler_detectors": "robust",
+        "cusum_threshold": 2.426827378577135,
+        "cusum_delta": 0.022609442655108593,
+        "cusum_min_instances": 19,
+        "scaler_model": "minmax",
+        "rf_n_estimators": 166,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 11,
+        "rf_min_samples_leaf": 12,
+        "rf_max_features": null,
+        "rf_bootstrap": true
+    },
+    "detector_params": {
+        "lambda_": 2.426827378577135,
+        "delta": 0.022609442655108593,
+        "min_n_instances": 19
+    },
+    "fixed_phi_b": null,
+    "fixed_scaler_detectors": null,
+    "fixed_catch24_window_size": null
+}

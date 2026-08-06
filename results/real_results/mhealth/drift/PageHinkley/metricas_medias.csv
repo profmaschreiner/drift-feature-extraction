@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+PageHinkley,0.6341196556250591,0.6709091951141681,0.6341196556250591,0.6341196556250591

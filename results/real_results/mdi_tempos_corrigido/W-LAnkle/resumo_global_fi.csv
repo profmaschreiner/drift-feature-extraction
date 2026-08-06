@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,left_ankle_acc_x,0.3500633731984037
+catch24,,left_ankle_acc_x__mean,0.09404721007604608
+drift,CUSUM,score_left_ankle_gyro_y,0.2510869936110048
+catch24_drift,HDDMAverage,score_left_ankle_acc_x,0.07112644127173433

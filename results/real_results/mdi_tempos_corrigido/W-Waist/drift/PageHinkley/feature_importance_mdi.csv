@@ -1,0 +1,11 @@
+feature,feature_importance_mdi
+score_waist_acc_y,0.23815861270377148
+score_waist_gyro_x,0.18507206067664994
+waist_gyro_x,0.14261830775952197
+score_waist_acc_x,0.12801851017745736
+waist_acc_y,0.1263382199630552
+score_waist_acc_z,0.11751809233092526
+waist_acc_z,0.050370053964677246
+waist_acc_x,0.007150853868839419
+waist_gyro_y,0.004676902112350158
+score_waist_gyro_y,7.838644275190224e-05

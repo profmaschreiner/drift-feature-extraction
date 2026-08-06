@@ -1,0 +1,17 @@
+{
+    "scenario": "catch24_drift",
+    "detector_name": "HDDMWeighted",
+    "best_macro_f1": 0.32281364099688137,
+    "best_params": {
+        "phi_b": 2.5572065974387024e-05,
+        "scaler_detectors": "standard",
+        "scaler_model": "standard",
+        "rf_n_estimators": 64,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 15,
+        "rf_min_samples_leaf": 18,
+        "rf_max_features": "log2",
+        "rf_bootstrap": true
+    },
+    "fixed_catch24_window_size": 130
+}

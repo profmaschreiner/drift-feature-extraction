@@ -1,0 +1,17 @@
+{
+    "scenario": "catch24_drift",
+    "detector_name": "CUSUM",
+    "best_macro_f1": 0.5457044685290668,
+    "best_params": {
+        "phi_b": 0.0021042137543560878,
+        "scaler_detectors": "robust",
+        "scaler_model": "standard",
+        "rf_n_estimators": 170,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 2,
+        "rf_min_samples_leaf": 12,
+        "rf_max_features": "log2",
+        "rf_bootstrap": true
+    },
+    "fixed_catch24_window_size": 130
+}

@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,right_wrist_acc_x,0.3258833258401095
+catch24,,right_wrist_gyro_y__mean,0.09243486140805135
+drift,GeometricMovingAverage,score_right_wrist_acc_x,0.2805771128162128
+catch24_drift,KSWIN,score_right_wrist_gyro_x,0.10003302187316579

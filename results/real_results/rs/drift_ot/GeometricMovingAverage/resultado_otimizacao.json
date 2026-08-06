@@ -1,0 +1,27 @@
+{
+    "scenario": "drift_ot",
+    "detector_name": "GeometricMovingAverage",
+    "best_macro_f1": 0.7949832365009392,
+    "best_params": {
+        "phi_b": 0.00029442723591496795,
+        "scaler_detectors": "standard",
+        "gma_threshold": 0.17711747399775965,
+        "gma_min_instances": 5,
+        "gma_alpha": 0.9327333534642914,
+        "scaler_model": "robust",
+        "rf_n_estimators": 87,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 16,
+        "rf_min_samples_leaf": 5,
+        "rf_max_features": "log2",
+        "rf_bootstrap": true
+    },
+    "detector_params": {
+        "lambda_": 0.17711747399775965,
+        "min_n_instances": 5,
+        "alpha": 0.9327333534642914
+    },
+    "fixed_phi_b": null,
+    "fixed_scaler_detectors": null,
+    "fixed_catch24_window_size": null
+}

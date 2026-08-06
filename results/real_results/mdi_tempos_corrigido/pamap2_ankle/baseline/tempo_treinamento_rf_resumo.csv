@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+baseline,,8,79.76457814313471,9.97057226789184,0.2586233181980524,0.03949131499492303

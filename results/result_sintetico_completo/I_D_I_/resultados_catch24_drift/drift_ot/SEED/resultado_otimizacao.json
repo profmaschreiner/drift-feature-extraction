@@ -1,0 +1,31 @@
+{
+    "scenario": "drift_ot",
+    "detector_name": "SEED",
+    "best_macro_f1": 0.23086570740845488,
+    "best_params": {
+        "phi_b": 1.4271649533645292e-06,
+        "scaler_detectors": "standard",
+        "seed_delta": 1.645854116312273e-06,
+        "seed_block_size": 82,
+        "seed_e_prime": 0.006404386124360245,
+        "seed_alpha": 0.4857486542395244,
+        "seed_compress_term": 85,
+        "scaler_model": "minmax",
+        "rf_n_estimators": 120,
+        "rf_max_depth": 4,
+        "rf_min_samples_split": 8,
+        "rf_min_samples_leaf": 1,
+        "rf_max_features": null,
+        "rf_bootstrap": true
+    },
+    "detector_params": {
+        "delta": 1.645854116312273e-06,
+        "block_size": 82,
+        "epsilon_prime": 0.006404386124360245,
+        "alpha": 0.4857486542395244,
+        "compress_term": 85
+    },
+    "fixed_phi_b": null,
+    "fixed_scaler_detectors": null,
+    "fixed_catch24_window_size": null
+}

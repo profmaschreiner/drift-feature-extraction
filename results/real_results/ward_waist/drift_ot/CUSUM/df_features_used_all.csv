@@ -1,0 +1,2 @@
+run,scenario,detector_name,n_features_union,n_features_after_nan_union,features_union,features_after_nan_union
+ward,drift_ot,CUSUM,10,10,"[""score_waist_acc_x"", ""score_waist_acc_y"", ""score_waist_acc_z"", ""score_waist_gyro_x"", ""score_waist_gyro_y"", ""waist_acc_x"", ""waist_acc_y"", ""waist_acc_z"", ""waist_gyro_x"", ""waist_gyro_y""]","[""score_waist_acc_x"", ""score_waist_acc_y"", ""score_waist_acc_z"", ""score_waist_gyro_x"", ""score_waist_gyro_y"", ""waist_acc_x"", ""waist_acc_y"", ""waist_acc_z"", ""waist_gyro_x"", ""waist_gyro_y""]"

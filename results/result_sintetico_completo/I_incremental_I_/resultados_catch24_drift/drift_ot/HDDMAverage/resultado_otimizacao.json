@@ -1,0 +1,25 @@
+{
+    "scenario": "drift_ot",
+    "detector_name": "HDDMAverage",
+    "best_macro_f1": 0.24943218668322895,
+    "best_params": {
+        "phi_b": 0.0036896774738373146,
+        "scaler_detectors": "standard",
+        "hddma_delta": 4.046978823861274e-07,
+        "scaler_model": "minmax",
+        "rf_n_estimators": 143,
+        "rf_max_depth": 4,
+        "rf_min_samples_split": 9,
+        "rf_min_samples_leaf": 9,
+        "rf_max_features": null,
+        "rf_bootstrap": true
+    },
+    "detector_params": {
+        "drift_confidence": 4.046978823861274e-07,
+        "warning_confidence": 4.046978823861274e-07,
+        "test_type": "Two-sided"
+    },
+    "fixed_phi_b": null,
+    "fixed_scaler_detectors": null,
+    "fixed_catch24_window_size": null
+}

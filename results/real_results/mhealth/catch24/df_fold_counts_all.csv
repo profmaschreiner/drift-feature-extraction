@@ -1,0 +1,11 @@
+run,window_size,use_catch24,short_names,fold,test_bases,n_train_windows,n_test_windows,n_features_common_train,n_features_after_nan_train
+dados_mhealth,70,1,1,0,[0],332336,39313,288,288
+dados_mhealth,70,1,1,1,[1],333012,38637,288,288
+dados_mhealth,70,1,1,2,[2],333442,38207,288,288
+dados_mhealth,70,1,1,3,[3],333671,37978,288,288
+dados_mhealth,70,1,1,4,[4],334903,36746,288,288
+dados_mhealth,70,1,1,5,[5],337304,34345,288,288
+dados_mhealth,70,1,1,6,[6],335115,36534,288,288
+dados_mhealth,70,1,1,7,[7],335190,36459,288,288
+dados_mhealth,70,1,1,8,[8],333998,37651,288,288
+dados_mhealth,70,1,1,9,[9],335870,35779,288,288

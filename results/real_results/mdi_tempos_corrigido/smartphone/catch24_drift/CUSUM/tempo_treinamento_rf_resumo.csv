@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+catch24_drift,CUSUM,10,1135.0425317808986,113.50425317808985,2.1406144804148393,0.15535391143164912

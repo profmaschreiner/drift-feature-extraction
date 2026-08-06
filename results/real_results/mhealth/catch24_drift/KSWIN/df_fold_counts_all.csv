@@ -1,0 +1,11 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+dados_mhealth,0,[0],332516,39333,312,312
+dados_mhealth,1,[1],333192,38657,312,312
+dados_mhealth,2,[2],333622,38227,312,312
+dados_mhealth,3,[3],333851,37998,312,312
+dados_mhealth,4,[4],335083,36766,312,312
+dados_mhealth,5,[5],337484,34365,312,312
+dados_mhealth,6,[6],335295,36554,312,312
+dados_mhealth,7,[7],335370,36479,312,312
+dados_mhealth,8,[8],334178,37671,312,312
+dados_mhealth,9,[9],336050,35799,312,312

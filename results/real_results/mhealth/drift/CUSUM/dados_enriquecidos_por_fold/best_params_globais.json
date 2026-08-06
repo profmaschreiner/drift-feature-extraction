@@ -1,0 +1,13 @@
+{
+    "best_value_mean_f1_macro": 0.712781525669126,
+    "best_params": {
+        "phi_b": 0.00010849855986084896,
+        "scaler_detectors": "standard",
+        "rf_n_estimators": 87,
+        "rf_max_depth": 7,
+        "rf_min_samples_split": 2,
+        "rf_min_samples_leaf": 4,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    }
+}

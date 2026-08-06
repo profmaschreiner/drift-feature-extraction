@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_scaler_total_s,t_deteccao_total_s,t_extracao_treino_total_s,t_extracao_teste_total_s,t_catch22_extracao_unica_s,t_total_extracao_todos_folds_s,t_total_extracao_mean_s,t_total_extracao_std_s,t_por_amostra_treino_ms_mean,t_por_amostra_teste_ms_mean
+baseline,,8,0.0,0.0,0.25242299027740955,0.028917554765939713,0.0,0.28134054504334927,0.03516756813041866,0.013313042236293163,0.00012507298223527236,9.980054073232717e-05

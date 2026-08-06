@@ -1,0 +1,2 @@
+run,f1_macro_mean,f1_macro_std,accuracy_mean,accuracy_std,n_features_modelo
+ADWIN,0.6908395196902175,0.10130273739696498,0.7368230783641507,0.08809646554526028,24

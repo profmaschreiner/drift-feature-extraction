@@ -1,0 +1,2 @@
+scenario,detector,n_folds,n_cols_features,mem_X_train_mb_mean,mem_X_train_mb_std,mem_X_train_mb_max,mem_X_train_mb_min,mem_X_test_mb_mean,mem_X_test_mb_std,mem_X_test_mb_max,mem_X_test_mb_min,mem_catch22_cache_mb
+catch24_drift,GeometricMovingAverage,10,130,512.4696235656738,2.878586408041958,515.7948036193848,507.17587661743164,56.94118118286133,2.878586408041958,62.234928131103516,53.61600112915039,525.6122589111328

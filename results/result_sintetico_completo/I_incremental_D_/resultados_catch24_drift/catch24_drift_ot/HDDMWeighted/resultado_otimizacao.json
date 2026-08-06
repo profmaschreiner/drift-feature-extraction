@@ -1,0 +1,23 @@
+{
+    "scenario": "catch24_drift_ot",
+    "detector_name": "HDDMWeighted",
+    "best_macro_f1": 0.4130708904179034,
+    "best_params": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 145,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 8,
+        "rf_min_samples_leaf": 5,
+        "rf_max_features": "log2",
+        "rf_bootstrap": true
+    },
+    "detector_params": {
+        "drift_confidence": 4.890439332746937e-05,
+        "warning_confidence": 4.890439332746937e-05,
+        "lambda_": 0.26291245304414923,
+        "test_type": "Two-sided"
+    },
+    "fixed_phi_b": 0.041751518090669584,
+    "fixed_scaler_detectors": "robust",
+    "fixed_catch24_window_size": 130
+}

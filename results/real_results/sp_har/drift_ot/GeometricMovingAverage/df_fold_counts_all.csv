@@ -1,0 +1,12 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+geotec_sp,0,"[0, 1]",241138,18075,12,12
+geotec_sp,1,"[2, 3]",237736,21477,12,12
+geotec_sp,2,"[4, 5]",235158,24055,12,12
+geotec_sp,3,"[6, 7]",233990,25223,12,12
+geotec_sp,4,"[8, 9]",236895,22318,12,12
+geotec_sp,5,"[10, 11]",235865,23348,12,12
+geotec_sp,6,"[12, 13]",236031,23182,12,12
+geotec_sp,7,"[14, 15]",237807,21406,12,12
+geotec_sp,8,"[16, 17]",233961,25252,12,12
+geotec_sp,9,"[18, 19]",236352,22861,12,12
+geotec_sp,10,"[20, 21, 22]",227197,32016,12,12

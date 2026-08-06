@@ -1,0 +1,13 @@
+run,fold,test_bases,RF
+D_incremental_D_,0,[0],0.5701624815361891
+D_incremental_D_,1,[1],0.8292210933720368
+D_incremental_D_,2,[2],0.6435185185185185
+D_incremental_D_,3,[3],0.7635047815973119
+D_incremental_D_,4,[4],0.7717090359929524
+D_incremental_D_,5,[5],0.24161073825503357
+D_incremental_D_,6,[6],0.5625305324865657
+D_incremental_D_,7,[7],0.6593137254901961
+D_incremental_D_,8,[8],0.6292569659442725
+D_incremental_D_,9,[9],0.6383345651638335
+D_incremental_D_,10,[10],0.6567901234567901
+D_incremental_D_,11,[11],0.741388174807198

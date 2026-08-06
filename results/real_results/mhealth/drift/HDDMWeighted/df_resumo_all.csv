@@ -1,0 +1,2 @@
+run,f1_macro_mean,f1_macro_std,accuracy_mean,accuracy_std,n_features_modelo
+HDDMWeighted,0.6328291029735117,0.14126442288425636,0.6747628251260885,0.12671097815457158,24

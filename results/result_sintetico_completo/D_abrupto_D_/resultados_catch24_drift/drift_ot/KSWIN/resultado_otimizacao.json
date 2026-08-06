@@ -1,0 +1,29 @@
+{
+    "scenario": "drift_ot",
+    "detector_name": "KSWIN",
+    "best_macro_f1": 0.627891316437975,
+    "best_params": {
+        "phi_b": 0.0042895899325199,
+        "scaler_detectors": "robust",
+        "kswin_alpha": 6.587506700747882e-05,
+        "kswin_window_size": 140,
+        "kswin_stat_frac": 0.3911174614102623,
+        "scaler_model": "minmax",
+        "rf_n_estimators": 123,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 5,
+        "rf_min_samples_leaf": 14,
+        "rf_max_features": null,
+        "rf_bootstrap": false
+    },
+    "detector_params": {
+        "alpha": 6.587506700747882e-05,
+        "window_size": 140,
+        "stat_frac": 0.3911174614102623,
+        "stat_size": 55,
+        "seed": 42
+    },
+    "fixed_phi_b": null,
+    "fixed_scaler_detectors": null,
+    "fixed_catch24_window_size": null
+}

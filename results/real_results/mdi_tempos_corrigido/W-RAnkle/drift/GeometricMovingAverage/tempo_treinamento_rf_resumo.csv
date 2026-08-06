@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+drift,GeometricMovingAverage,10,97.80857734009624,9.780857734009624,0.18044466566666198,0.018844458742728696

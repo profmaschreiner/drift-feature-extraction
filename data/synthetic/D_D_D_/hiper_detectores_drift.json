@@ -1,0 +1,17 @@
+{
+    "n_trials": 1,
+    "resultados": {
+        "REAL": {
+            "best_macro_f1": 0.3103808827215152,
+            "best_params": {
+                "phi_b": 9.457447784432098e-05,
+                "scaler_model": "standard",
+                "rf_n_estimators": 22,
+                "rf_max_depth": 6,
+                "rf_min_samples_split": 12,
+                "rf_min_samples_leaf": 29,
+                "rf_max_features": "sqrt"
+            }
+        }
+    }
+}

@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+SEED,0.7007826335681839,0.7649731593289956,0.7007826335681839,0.7007826335681839

@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+HDDMWeighted,0.6328291029735117,0.6747628251260885,0.6328291029735117,0.6328291029735117

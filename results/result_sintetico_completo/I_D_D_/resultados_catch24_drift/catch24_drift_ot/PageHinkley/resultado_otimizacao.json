@@ -1,0 +1,23 @@
+{
+    "scenario": "catch24_drift_ot",
+    "detector_name": "PageHinkley",
+    "best_macro_f1": 0.6226354141399258,
+    "best_params": {
+        "scaler_model": "robust",
+        "rf_n_estimators": 52,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 15,
+        "rf_min_samples_leaf": 14,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": false
+    },
+    "detector_params": {
+        "delta": 0.00014413391662485649,
+        "threshold": 15.570471992704558,
+        "alpha": 0.9706791743709612,
+        "min_instances": 14
+    },
+    "fixed_phi_b": 0.022906886717494537,
+    "fixed_scaler_detectors": "robust",
+    "fixed_catch24_window_size": 130
+}

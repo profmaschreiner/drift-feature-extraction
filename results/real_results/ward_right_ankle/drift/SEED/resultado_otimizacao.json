@@ -1,0 +1,17 @@
+{
+    "scenario": "drift",
+    "detector_name": "SEED",
+    "best_macro_f1": 0.5194258932355601,
+    "best_params": {
+        "phi_b": 7.694144411515858e-05,
+        "scaler_detectors": "minmax",
+        "scaler_model": "minmax",
+        "rf_n_estimators": 116,
+        "rf_max_depth": 4,
+        "rf_min_samples_split": 9,
+        "rf_min_samples_leaf": 18,
+        "rf_max_features": "log2",
+        "rf_bootstrap": true
+    },
+    "fixed_catch24_window_size": null
+}

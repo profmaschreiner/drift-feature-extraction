@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+GeometricMovingAverage,0.5951874157455815,0.6773339451532148,0.5951874157455815,0.5951874157455815

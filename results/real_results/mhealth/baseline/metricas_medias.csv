@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+baseline,0.5127409349967298,0.5611947757002513,0.5127409349967298,0.5127409349967298

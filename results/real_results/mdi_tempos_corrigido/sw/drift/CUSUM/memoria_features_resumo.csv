@@ -1,0 +1,2 @@
+scenario,detector,n_folds,n_cols_features,mem_X_train_mb_mean,mem_X_train_mb_std,mem_X_train_mb_max,mem_X_train_mb_min,mem_X_test_mb_mean,mem_X_test_mb_std,mem_X_test_mb_max,mem_X_test_mb_min,mem_catch22_cache_mb
+drift,CUSUM,11,12,21.85234867442738,0.32376174524602214,22.36581802368164,21.060184478759766,2.185348163951527,0.32376174524602214,2.9775123596191406,1.6718788146972656,0.0

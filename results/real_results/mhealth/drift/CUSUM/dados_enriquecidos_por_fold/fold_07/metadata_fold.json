@@ -1,0 +1,20 @@
+{
+    "fold": 7,
+    "train_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+    ],
+    "test_indices": [
+        7
+    ],
+    "detector_name": "CUSUM",
+    "phi_b": 0.00010849855986084896,
+    "scaler_name": "standard"
+}

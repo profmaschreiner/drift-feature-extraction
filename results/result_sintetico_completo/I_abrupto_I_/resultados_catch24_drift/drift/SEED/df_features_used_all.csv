@@ -1,0 +1,2 @@
+run,scenario,detector_name,n_features_union,n_features_after_nan_union,features_union,features_after_nan_union
+I_abrupto_I_,drift,SEED,8,8,"[""score_x1"", ""score_x2"", ""score_x3"", ""score_x4"", ""x1"", ""x2"", ""x3"", ""x4""]","[""score_x1"", ""score_x2"", ""score_x3"", ""score_x4"", ""x1"", ""x2"", ""x3"", ""x4""]"

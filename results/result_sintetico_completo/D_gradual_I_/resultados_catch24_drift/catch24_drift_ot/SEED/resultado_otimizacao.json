@@ -1,0 +1,24 @@
+{
+    "scenario": "catch24_drift_ot",
+    "detector_name": "SEED",
+    "best_macro_f1": 0.3874057959424486,
+    "best_params": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 51,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 5,
+        "rf_min_samples_leaf": 15,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": false
+    },
+    "detector_params": {
+        "delta": 0.0012149001504403916,
+        "block_size": 91,
+        "epsilon_prime": 0.0044455604777742215,
+        "alpha": 0.4126486621390769,
+        "compress_term": 75
+    },
+    "fixed_phi_b": 0.013495626022305116,
+    "fixed_scaler_detectors": "robust",
+    "fixed_catch24_window_size": 130
+}

@@ -1,0 +1,13 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+I_abrupto_I_,0,[0],40693,3647,104,104
+I_abrupto_I_,1,[1],40717,3623,104,104
+I_abrupto_I_,2,[2],40717,3623,104,104
+I_abrupto_I_,3,[3],40609,3731,104,104
+I_abrupto_I_,4,[4],40729,3611,104,104
+I_abrupto_I_,5,[5],40777,3563,104,104
+I_abrupto_I_,6,[6],40549,3791,104,104
+I_abrupto_I_,7,[7],40585,3755,104,104
+I_abrupto_I_,8,[8],40597,3743,104,104
+I_abrupto_I_,9,[9],40561,3779,104,104
+I_abrupto_I_,10,[10],40645,3695,104,104
+I_abrupto_I_,11,[11],40561,3779,104,104

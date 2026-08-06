@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_scaler_total_s,t_deteccao_total_s,t_extracao_treino_total_s,t_extracao_teste_total_s,t_catch22_extracao_unica_s,t_total_extracao_todos_folds_s,t_total_extracao_mean_s,t_total_extracao_std_s,t_por_amostra_treino_ms_mean,t_por_amostra_teste_ms_mean
+drift,CUSUM,10,0.41931782849133015,362.9389628376812,34.27931553684175,3.766965623944998,0.0,401.40456182695925,40.14045618269593,0.0798664111849678,0.004669818161034546,0.004618390451094862

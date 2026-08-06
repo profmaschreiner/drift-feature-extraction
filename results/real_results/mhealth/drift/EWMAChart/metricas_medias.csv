@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+EWMAChart,0.5096941378878295,0.5964002191494927,0.5096941378878295,0.5096941378878295

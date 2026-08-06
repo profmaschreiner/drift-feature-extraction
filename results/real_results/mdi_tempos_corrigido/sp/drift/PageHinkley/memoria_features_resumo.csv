@@ -1,0 +1,2 @@
+scenario,detector,n_folds,n_cols_features,mem_X_train_mb_mean,mem_X_train_mb_std,mem_X_train_mb_max,mem_X_train_mb_min,mem_X_test_mb_mean,mem_X_test_mb_std,mem_X_test_mb_max,mem_X_test_mb_min,mem_catch22_cache_mb
+drift,PageHinkley,11,12,21.57436128096147,0.3153722100589348,22.076969146728516,20.80063247680664,2.157549424604936,0.3153722100589348,2.9312782287597656,1.6549415588378906,0.0

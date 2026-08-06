@@ -1,0 +1,12 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+rs_default,0,[3],21762,4304,5,5
+rs_default,1,[4],20429,5637,5,5
+rs_default,2,[5],19033,7033,5,5
+rs_default,3,"[0, 1]",23328,2738,5,5
+rs_default,4,"[0, 2]",23537,2529,5,5
+rs_default,5,"[0, 7]",22994,3072,5,5
+rs_default,6,"[0, 8]",22611,3455,5,5
+rs_default,7,"[6, 1]",23238,2828,5,5
+rs_default,8,"[6, 2]",23447,2619,5,5
+rs_default,9,"[6, 7]",22904,3162,5,5
+rs_default,10,"[6, 8]",22521,3545,5,5

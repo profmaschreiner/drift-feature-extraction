@@ -1,0 +1,2 @@
+run,scenario,detector_name,n_features_union,n_features_after_nan_union,features_union,features_after_nan_union
+geotec_sw,baseline,,6,6,"[""x_acc"", ""x_gyro"", ""y_acc"", ""y_gyro"", ""z_acc"", ""z_gyro""]","[""x_acc"", ""x_gyro"", ""y_acc"", ""y_gyro"", ""z_acc"", ""z_gyro""]"

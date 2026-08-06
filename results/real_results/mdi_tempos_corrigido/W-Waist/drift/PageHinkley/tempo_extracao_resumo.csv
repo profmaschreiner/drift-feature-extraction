@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_scaler_total_s,t_deteccao_total_s,t_extracao_treino_total_s,t_extracao_teste_total_s,t_catch22_extracao_unica_s,t_total_extracao_todos_folds_s,t_total_extracao_mean_s,t_total_extracao_std_s,t_por_amostra_treino_ms_mean,t_por_amostra_teste_ms_mean
+drift,PageHinkley,10,0.12071920372545719,41.51744429394603,23.751545794308186,2.6132315061986446,0.0,68.00294079817832,6.8002940798178315,0.06877311381055919,0.004576544393770076,0.0045318320505523205

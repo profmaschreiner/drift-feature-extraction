@@ -1,0 +1,20 @@
+{
+    "fold": 5,
+    "train_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+    ],
+    "test_indices": [
+        5
+    ],
+    "detector_name": "HDDMWeighted",
+    "phi_b": 0.0014880699509911967,
+    "scaler_name": "robust"
+}

@@ -1,0 +1,3 @@
+scenario,detector,t_fit_pipeline_s__sum,t_fit_pipeline_s__mean,t_fit_pipeline_s__std,t_fit_por_amostra_ms__mean,t_fit_por_amostra_ms__std,n_train_samples__sum
+catch24_drift,KSWIN,261.6054677553475,26.160546775534748,0.9531740255911033,0.050593351296756996,0.001754327507411038,5170554
+drift,GeometricMovingAverage,60.94637963734567,6.094637963734567,0.2705591486979702,0.01174309417721435,0.0005275872500850275,5190174

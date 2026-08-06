@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,hand_acc16_x,0.18262825872862726
+catch24,,hand_acc16_x__mean,0.07413489788955449
+drift,SEED,hand_acc6_x,0.105073050047037
+catch24_drift,HDDMAverage,score_hand_gyro_x,0.05595619149793945

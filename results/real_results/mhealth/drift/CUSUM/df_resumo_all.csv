@@ -1,0 +1,2 @@
+run,f1_macro_mean,f1_macro_std,accuracy_mean,accuracy_std,n_features_modelo
+CUSUM,0.712781525669126,0.0884912770443909,0.7720329398324366,0.09609310382116187,24

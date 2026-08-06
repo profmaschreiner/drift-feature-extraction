@@ -1,0 +1,3 @@
+run,scenario,detector_name,n_features_union,n_features_after_nan_union,features_union,features_after_nan_union
+D_abrupto_D_,baseline,,4,4,"[""x1"", ""x2"", ""x3"", ""x4""]","[""x1"", ""x2"", ""x3"", ""x4""]"
+D_abrupto_D_,baseline,,4,4,"[""x1"", ""x2"", ""x3"", ""x4""]","[""x1"", ""x2"", ""x3"", ""x4""]"

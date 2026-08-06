@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+catch24_drift,SEED,10,6.387781102210283,0.6387781102210284,0.11287080940370728,0.09367701842173325

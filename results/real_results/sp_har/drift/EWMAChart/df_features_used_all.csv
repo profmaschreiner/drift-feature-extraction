@@ -1,0 +1,2 @@
+run,scenario,detector_name,n_features_union,n_features_after_nan_union,features_union,features_after_nan_union
+geotec_sp,drift,EWMAChart,12,12,"[""score_x_acc"", ""score_x_gyro"", ""score_y_acc"", ""score_y_gyro"", ""score_z_acc"", ""score_z_gyro"", ""x_acc"", ""x_gyro"", ""y_acc"", ""y_gyro"", ""z_acc"", ""z_gyro""]","[""score_x_acc"", ""score_x_gyro"", ""score_y_acc"", ""score_y_gyro"", ""score_z_acc"", ""score_z_gyro"", ""x_acc"", ""x_gyro"", ""y_acc"", ""y_gyro"", ""z_acc"", ""z_gyro""]"

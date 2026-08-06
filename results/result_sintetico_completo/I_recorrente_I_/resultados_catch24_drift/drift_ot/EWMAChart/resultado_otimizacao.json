@@ -1,0 +1,25 @@
+{
+    "scenario": "drift_ot",
+    "detector_name": "EWMAChart",
+    "best_macro_f1": 0.177954164437505,
+    "best_params": {
+        "phi_b": 6.215390155584871e-06,
+        "scaler_detectors": "minmax",
+        "ewma_lambda": 0.26357184414181867,
+        "ewma_min_instances": 22,
+        "scaler_model": "standard",
+        "rf_n_estimators": 91,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 12,
+        "rf_min_samples_leaf": 15,
+        "rf_max_features": null,
+        "rf_bootstrap": false
+    },
+    "detector_params": {
+        "lambda_": 0.26357184414181867,
+        "min_n_instances": 22
+    },
+    "fixed_phi_b": null,
+    "fixed_scaler_detectors": null,
+    "fixed_catch24_window_size": null
+}

@@ -1,0 +1,2 @@
+scenario,detector,n_folds,t_fit_total_todos_folds_s,t_fit_mean_s,t_fit_std_s,t_fit_por_amostra_ms_mean
+drift,PageHinkley,10,94.24926593154669,9.42492659315467,0.29636215044329445,0.01815877623497879

@@ -1,0 +1,14 @@
+{
+    "scenario": "baseline",
+    "detector_name": null,
+    "best_macro_f1": 0.839052792720661,
+    "best_params": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 263,
+        "rf_max_depth": 20,
+        "rf_min_samples_split": 3,
+        "rf_min_samples_leaf": 6,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    }
+}

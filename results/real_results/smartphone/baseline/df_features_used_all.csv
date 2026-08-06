@@ -1,0 +1,2 @@
+run,scenario,detector_name,n_features_union,n_features_after_nan_union,features_union,features_after_nan_union
+smartphone,baseline,,6,6,"[""acc_x"", ""acc_y"", ""acc_z"", ""gyro_x"", ""gyro_y"", ""gyro_z""]","[""acc_x"", ""acc_y"", ""acc_z"", ""gyro_x"", ""gyro_y"", ""gyro_z""]"

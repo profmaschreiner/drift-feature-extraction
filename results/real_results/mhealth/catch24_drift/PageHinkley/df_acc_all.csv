@@ -1,0 +1,11 @@
+run,fold,test_bases,RF
+dados_mhealth,0,[0],0.9810034839661267
+dados_mhealth,1,[1],0.9727275079566331
+dados_mhealth,2,[2],0.9086270507889159
+dados_mhealth,3,[3],0.9845740760240076
+dados_mhealth,4,[4],0.9838121667210795
+dados_mhealth,5,[5],0.8918352495997671
+dados_mhealth,6,[6],0.9714590630472855
+dados_mhealth,7,[7],0.9703858071238586
+dados_mhealth,8,[8],0.9849977430232867
+dados_mhealth,9,[9],0.9836821369694599

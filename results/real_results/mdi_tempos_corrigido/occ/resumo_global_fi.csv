@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,S1_Light,0.20217340603756181
+catch24,,S1_Light__mean,0.0833757160065965
+drift,HDDMWeighted,S1_Light,0.19835111692591412
+catch24_drift,SEED,S1_Sound__mean,0.0692473045426787

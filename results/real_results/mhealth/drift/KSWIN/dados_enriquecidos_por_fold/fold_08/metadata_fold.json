@@ -1,0 +1,20 @@
+{
+    "fold": 8,
+    "train_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+    ],
+    "test_indices": [
+        8
+    ],
+    "detector_name": "KSWIN",
+    "phi_b": 0.00021224454567265002,
+    "scaler_name": "minmax"
+}

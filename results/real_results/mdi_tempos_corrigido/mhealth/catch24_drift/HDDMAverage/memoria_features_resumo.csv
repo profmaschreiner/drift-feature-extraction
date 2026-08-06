@@ -1,0 +1,2 @@
+scenario,detector,n_folds,n_cols_features,mem_X_train_mb_mean,mem_X_train_mb_std,mem_X_train_mb_max,mem_X_train_mb_min,mem_X_test_mb_mean,mem_X_test_mb_std,mem_X_test_mb_max,mem_X_test_mb_min,mem_catch22_cache_mb
+catch24_drift,HDDMAverage,10,312,795.5537086486817,3.52255344195374,802.2661170959473,790.4404335021973,88.39496841430665,3.52255344195374,93.50824356079102,81.68255996704102,815.9536514282227

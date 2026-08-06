@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,z_acc,0.35366334240511865
+catch24,,y_gyro__SD,0.26523568177324097
+drift,PageHinkley,z_acc,0.25525825233522087
+catch24_drift,SEED,y_gyro__SD,0.24946402830123116

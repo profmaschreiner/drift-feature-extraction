@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,z_acc,0.31687179726196313
+catch24,,x_acc__mean,0.3701523695382046
+drift,CUSUM,score_x_acc,0.19208799212278
+catch24_drift,GeometricMovingAverage,x_acc__mean,0.32008330077621266

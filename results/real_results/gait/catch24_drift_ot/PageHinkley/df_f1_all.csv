@@ -1,0 +1,11 @@
+run,fold,test_bases,RF
+gait_default,0,[0],0.9989619108366886
+gait_default,1,[1],1.0
+gait_default,2,[2],0.9996540041317031
+gait_default,3,[3],0.9989619108366886
+gait_default,4,[4],0.9989619108366886
+gait_default,5,[5],0.999654037234086
+gait_default,6,[6],0.9989619108366886
+gait_default,7,[7],0.9983028208499062
+gait_default,8,[8],0.9996540041317031
+gait_default,9,[9],0.9996540041317031

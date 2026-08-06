@@ -1,0 +1,20 @@
+{
+    "fold": 7,
+    "train_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+    ],
+    "test_indices": [
+        7
+    ],
+    "detector_name": "SEED",
+    "phi_b": 0.00018240220665559852,
+    "scaler_name": "robust"
+}

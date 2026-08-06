@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,sdu002_1,0.44104736540098066
+catch24,,sdu002_1__mean,0.11145370744758418
+drift,ADWIN,score_sdu002_1,0.2512398347365491
+catch24_drift,ADWIN,sdu002_1,0.09851757819958636

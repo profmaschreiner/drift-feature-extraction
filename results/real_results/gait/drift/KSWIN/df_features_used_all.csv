@@ -1,0 +1,2 @@
+run,scenario,detector_name,n_features_union,n_features_after_nan_union,features_union,features_after_nan_union
+gait_default,drift,KSWIN,12,12,"[""angle_1_1"", ""angle_1_2"", ""angle_1_3"", ""angle_2_1"", ""angle_2_2"", ""angle_2_3"", ""score_angle_1_1"", ""score_angle_1_2"", ""score_angle_1_3"", ""score_angle_2_1"", ""score_angle_2_2"", ""score_angle_2_3""]","[""angle_1_1"", ""angle_1_2"", ""angle_1_3"", ""angle_2_1"", ""angle_2_2"", ""angle_2_3"", ""score_angle_1_1"", ""score_angle_1_2"", ""score_angle_1_3"", ""score_angle_2_1"", ""score_angle_2_2"", ""score_angle_2_3""]"

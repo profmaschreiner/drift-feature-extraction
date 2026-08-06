@@ -1,0 +1,5 @@
+scenario,detector,top1_fi,top1_fi_val
+baseline,,waist_gyro_x,0.39064918195815246
+catch24,,waist_gyro_x__mean,0.093608443748499
+drift,PageHinkley,score_waist_acc_y,0.23815861270377148
+catch24_drift,GeometricMovingAverage,waist_gyro_x__mean,0.08414283179583648

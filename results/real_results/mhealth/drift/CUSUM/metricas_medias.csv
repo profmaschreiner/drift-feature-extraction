@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+CUSUM,0.712781525669126,0.7720329398324366,0.712781525669126,0.712781525669126

@@ -1,0 +1,153 @@
+{
+    "scenario": "PageHinkley",
+    "best_value_mean_f1_macro": 0.6341196556250591,
+    "best_params": {
+        "phi_b": 0.00014012042506722516,
+        "scaler_detectors": "minmax",
+        "rf_n_estimators": 76,
+        "rf_max_depth": 10,
+        "rf_min_samples_split": 12,
+        "rf_min_samples_leaf": 8,
+        "rf_max_features": "log2",
+        "rf_bootstrap": true
+    },
+    "fold_scores": [
+        {
+            "fold": 0,
+            "f1_macro": 0.7102583948094815,
+            "f1_mean_classes": 0.7102583948094815,
+            "accuracy": 0.7315778782184754,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 1,
+            "f1_macro": 0.7046201064815444,
+            "f1_mean_classes": 0.7046201064815444,
+            "accuracy": 0.7479915197500558,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 2,
+            "f1_macro": 0.591166854381133,
+            "f1_mean_classes": 0.591166854381133,
+            "accuracy": 0.6115330956440862,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 3,
+            "f1_macro": 0.753052519239263,
+            "f1_mean_classes": 0.753052519239263,
+            "accuracy": 0.8093322186226356,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 4,
+            "f1_macro": 0.7744549651339288,
+            "f1_mean_classes": 0.7744549651339288,
+            "accuracy": 0.8055300023654953,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 5,
+            "f1_macro": 0.5498450331253949,
+            "f1_mean_classes": 0.5498450331253949,
+            "accuracy": 0.6219204128751867,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 6,
+            "f1_macro": 0.5886504181756571,
+            "f1_mean_classes": 0.5886504181756571,
+            "accuracy": 0.6002789562387401,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 7,
+            "f1_macro": 0.5463507324315622,
+            "f1_mean_classes": 0.5463507324315622,
+            "accuracy": 0.6246482528754473,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 8,
+            "f1_macro": 0.3229692283830677,
+            "f1_mean_classes": 0.3229692283830677,
+            "accuracy": 0.33462001752080595,
+            "n_features_modelo": 24
+        },
+        {
+            "fold": 9,
+            "f1_macro": 0.7998283040895585,
+            "f1_mean_classes": 0.7998283040895585,
+            "accuracy": 0.8216595970307529,
+            "n_features_modelo": 24
+        }
+    ],
+    "f1_por_classe_summary": [
+        {
+            "classe": 0,
+            "f1_medio": 0.2659898718140112,
+            "f1_desvio": 0.07257403002964759
+        },
+        {
+            "classe": 1,
+            "f1_medio": 0.48126996213154066,
+            "f1_desvio": 0.4787101694261481
+        },
+        {
+            "classe": 2,
+            "f1_medio": 0.1823180267274067,
+            "f1_desvio": 0.31150457842580875
+        },
+        {
+            "classe": 3,
+            "f1_medio": 0.7086766769934403,
+            "f1_desvio": 0.41794624047659135
+        },
+        {
+            "classe": 4,
+            "f1_medio": 0.7706752188246867,
+            "f1_desvio": 0.2673656371770869
+        },
+        {
+            "classe": 5,
+            "f1_medio": 0.6680907763809166,
+            "f1_desvio": 0.3157032545730841
+        },
+        {
+            "classe": 6,
+            "f1_medio": 0.8859810742727408,
+            "f1_desvio": 0.1751959342437315
+        },
+        {
+            "classe": 7,
+            "f1_medio": 0.8026610308920145,
+            "f1_desvio": 0.1859545450149651
+        },
+        {
+            "classe": 8,
+            "f1_medio": 0.6896483841626092,
+            "f1_desvio": 0.1886488681762761
+        },
+        {
+            "classe": 9,
+            "f1_medio": 0.7546186681724334,
+            "f1_desvio": 0.36301972587057035
+        },
+        {
+            "classe": 10,
+            "f1_medio": 0.720035189827122,
+            "f1_desvio": 0.24907671774919315
+        },
+        {
+            "classe": 11,
+            "f1_medio": 0.8640547458070167,
+            "f1_desvio": 0.17242355086665612
+        },
+        {
+            "classe": 12,
+            "f1_medio": 0.4495358971198301,
+            "f1_desvio": 0.21645939920421148
+        }
+    ]
+}

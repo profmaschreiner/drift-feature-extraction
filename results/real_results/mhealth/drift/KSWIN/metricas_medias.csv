@@ -1,0 +1,2 @@
+scenario,best_value_mean_f1_macro,mean_accuracy,mean_f1_macro_folds,mean_f1_mean_classes
+KSWIN,0.7193173108848814,0.7601930546641991,0.7193173108848814,0.7193173108848814

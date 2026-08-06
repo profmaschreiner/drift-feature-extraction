@@ -1,0 +1,29 @@
+{
+    "scenario": "drift_ot",
+    "detector_name": "PageHinkley",
+    "best_macro_f1": 0.541135510429929,
+    "best_params": {
+        "phi_b": 0.0006800936615346853,
+        "scaler_detectors": "standard",
+        "ph_delta": 0.0003478446942398195,
+        "ph_threshold": 21.02120931602858,
+        "ph_alpha": 0.9560104492929505,
+        "ph_min_instances": 9,
+        "scaler_model": "minmax",
+        "rf_n_estimators": 162,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 4,
+        "rf_min_samples_leaf": 6,
+        "rf_max_features": null,
+        "rf_bootstrap": true
+    },
+    "detector_params": {
+        "delta": 0.0003478446942398195,
+        "threshold": 21.02120931602858,
+        "alpha": 0.9560104492929505,
+        "min_instances": 9
+    },
+    "fixed_phi_b": null,
+    "fixed_scaler_detectors": null,
+    "fixed_catch24_window_size": null
+}

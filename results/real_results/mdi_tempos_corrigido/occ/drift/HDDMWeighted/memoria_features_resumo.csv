@@ -1,0 +1,2 @@
+scenario,detector,n_folds,n_cols_features,mem_X_train_mb_mean,mem_X_train_mb_std,mem_X_train_mb_max,mem_X_train_mb_min,mem_X_test_mb_mean,mem_X_test_mb_std,mem_X_test_mb_max,mem_X_test_mb_min,mem_catch22_cache_mb
+drift,HDDMWeighted,10,34,1.772057342529297,0.19463356668393614,1.9897193908691406,1.4615821838378906,0.8556510925292968,0.19463356668393614,1.1661262512207031,0.6379890441894531,0.0

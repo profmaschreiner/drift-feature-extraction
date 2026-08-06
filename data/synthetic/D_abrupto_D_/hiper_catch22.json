@@ -1,0 +1,18 @@
+{
+    "resultados": {
+        "D_abrupto_D_": {
+            "best_macro_f1": 0.2878299972462898,
+            "best_params": {
+                "window_size": 180,
+                "scaler_model": "standard",
+                "rf_n_estimators": 73,
+                "rf_max_depth": 4,
+                "rf_min_samples_split": 3,
+                "rf_min_samples_leaf": 27,
+                "rf_max_features": "log2"
+            },
+            "use_catch24": false,
+            "short_names": true
+        }
+    }
+}

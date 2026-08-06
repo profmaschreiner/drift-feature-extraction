@@ -1,0 +1,17 @@
+dataset,label,c1_min_s,c1_min_detector,c1_mediana_s,c1_max_s,c1_max_detector,c1_melhor_s,c1_melhor_detector,c2_s,razao_c2_mediana,razao_c2_melhor
+W-LAnkle,W-LAnkle,226.86,CUSUM,226.86,226.86,CUSUM,226.86,CUSUM,2895.98,12.8,12.8
+W-LWrist,W-LWrist,232.02,GeometricMovingAverage,232.02,232.02,GeometricMovingAverage,232.02,GeometricMovingAverage,1917.44,8.3,8.3
+W-RAnkle,W-RAnkle,231.24,GeometricMovingAverage,231.24,231.24,GeometricMovingAverage,231.24,GeometricMovingAverage,2893.52,12.5,12.5
+W-RWrist,W-RWrist,230.33,GeometricMovingAverage,230.33,230.33,GeometricMovingAverage,230.33,GeometricMovingAverage,2886.91,12.5,12.5
+W-Waist,W-Waist,68.0,PageHinkley,68.0,68.0,PageHinkley,68.0,PageHinkley,2914.01,42.9,42.9
+gait,Gait,24.93,KSWIN,24.93,24.93,KSWIN,24.93,KSWIN,100.73,4.0,4.0
+mhealth,MH,353.16,HDDMAverage,353.16,353.16,HDDMAverage,353.16,HDDMAverage,2254.38,6.4,6.4
+occ,RO,14.67,HDDMWeighted,14.67,14.67,HDDMWeighted,14.67,HDDMWeighted,5.16,0.4,0.4
+pamap2_ankle,P2-Ankle,8858.78,KSWIN,8858.78,8858.78,KSWIN,8858.78,KSWIN,3601.54,0.4,0.4
+pamap2_chest,P2-Chest,244.43,GeometricMovingAverage,244.43,244.43,GeometricMovingAverage,244.43,GeometricMovingAverage,3575.25,14.6,14.6
+pamap2_hand,P2-Hand,259.46,SEED,259.46,259.46,SEED,259.46,SEED,3607.05,13.9,13.9
+rs,DR,9.8,ADWIN,9.8,9.8,ADWIN,9.8,ADWIN,73.54,7.5,7.5
+smartphone,SmPh,401.4,CUSUM,401.4,401.4,CUSUM,401.4,CUSUM,3273.0,8.2,8.2
+sp,Sp,39.49,PageHinkley,39.49,39.49,PageHinkley,39.49,PageHinkley,1514.32,38.3,38.3
+sw,Sw,142.47,CUSUM,142.47,142.47,CUSUM,142.47,CUSUM,1518.51,10.7,10.7
+usc,USC,52.05,PageHinkley,52.05,52.05,PageHinkley,52.05,PageHinkley,3388.81,65.1,65.1
