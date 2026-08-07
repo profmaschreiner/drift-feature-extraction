@@ -69,7 +69,16 @@ data/real/README.md` lists the source of each dataset and the preprocessing step
 ├── CITATION.cff
 └── LICENSE
 ```
+Architecture note: alarm detection vs. scoring
 
+Drift alarm positions are detected once — running the actual online detectors (ADWIN, PageHinkley, KSWIN from River; CUSUM, EWMAChart, GMA, HDDMA, HDDMW, SEED from CapyMOA) instance by instance, in the same row-major order as Algorithm 1 — and cached to disk, since alarm positions do not depend on φ_b. src/scoring.py is then applied per feature over these cached positions to (re)generate the drift-score for each φ_b value tried during Optuna search, avoiding re-running the online detectors at every trial.
+
+The granularity of this cache differs between the two detector-hyperparameter configurations described in Section 5.3:
+
+C1.A / C3.A (default detector hyperparameters): alarm positions depend only on feature, detector, scaler, and fold, so the cache key is detector / scaler / fold / split, and detection runs exactly once per combination.
+C1.B / C3.B (optimized detector hyperparameters): alarm positions also depend on the detector's internal hyperparameters (e.g. ADWIN's δ), which change at every Optuna trial. The cache key therefore additionally includes a stable hash of the detector's hyperparameter dictionary (detector / scaler / hash(params) / fold / split), so detection is re-run once per hyperparameter configuration actually evaluated, not once overall — but is still reused across repeated evaluations of the same configuration (e.g. re-scoring under different φ_b) within a trial.
+
+Because each feature's recurrence (Sⱼ, wⱼ, φⱼ, βⱼ) is fully independent of every other feature, applying the scoring function column-by-column over cached alarm positions is mathematically equivalent to the row-major, per-instance loop described in the paper, regardless of which cache granularity produced the alarm positions being scored.
 ---
 
 ## 4. Reproducibility

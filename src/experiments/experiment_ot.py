@@ -1,3 +1,4 @@
+from scoring import gerar_scores_a_partir_de_posicoes
 import os
 import json
 import hashlib
@@ -47,7 +48,7 @@ warnings.simplefilter("once", FutureWarning)
 # =========================================================
 
 """
-PASTA_ENTRADA = "datasetsNew/dados_mhealth"
+PASTA_ENTRADA = "data/real/dados_mhealth"
 PASTA_SAIDA = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 
 ROTULO = "Activity"
@@ -60,7 +61,7 @@ CONJ_TESTE = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]]
 
 
 
-PASTA_ENTRADA = "datasetsNew/rs"
+PASTA_ENTRADA = "data/real/rs"
 PASTA_SAIDA = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 
 ROTULO = "rotulo"
@@ -71,7 +72,7 @@ CONJ_TESTE = [[3], [4], [5], [0, 1], [0,2], [0,7], [0,8], [6, 1], [6, 2], [6,7],
 
 
 
-PASTA_ENTRADA = "datasetsNew/gait"
+PASTA_ENTRADA = "data/real/gait"
 PASTA_SAIDA = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 
 ROTULO = "label"
@@ -82,7 +83,7 @@ CONJ_TESTE = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]]
 
 
 
-PASTA_ENTRADA = "datasetsNew/pamap2D"
+PASTA_ENTRADA = "data/real/pamap2D"
 PASTA_SAIDA = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift_ankle")
 
 ROTULO = "activityID"
@@ -97,7 +98,7 @@ CONJ_TESTE = [[0], [1], [2], [3], [4], [5], [6], [7]]
 
 
 
-PASTA_ENTRADA = "datasetsNew/occ"
+PASTA_ENTRADA = "data/real/occ"
 PASTA_SAIDA = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 
 ROTULO = "Room_Occupancy_Count"
@@ -108,7 +109,7 @@ END_BASE = ".csv"
 CONJ_TESTE = [[0,2],[0,3], [0,4], [0,5], [0,6], [1,2],[1,3], [1,4], [1,5], [1,6]]
 
 
-PASTA_ENTRADA = "datasetsNew/smartphone"
+PASTA_ENTRADA = "data/real/smartphone"
 PASTA_SAIDA = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 
 ROTULO = "label"
@@ -119,7 +120,7 @@ CONJ_TESTE = [[0,1,2], [3,4,5], [6,7,8], [9,10,11], [12,13,14], [15,16,17], [18,
 
 
 
-PASTA_ENTRADA = "datasetsNew/usc_had"
+PASTA_ENTRADA = "data/real/usc_had"
 PASTA_SAIDA = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 
 ROTULO = "activity_code"
@@ -131,7 +132,7 @@ CONJ_TESTE = [[0,1],  [2,3], [4,5],  [6,7], [8,9], [10,11], [12,13]]
 
 """
 
-PASTA_ENTRADA = "datasetsNew/sintetico/datasets_sinteticos"
+PASTA_ENTRADA = "data/synthetic"
 PASTA_SAIDA = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 
 ROTULO = "y"
@@ -143,7 +144,7 @@ CONJ_TESTE = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]
 
 """
 
-PASTA_ENTRADA      = "datasetsNew/ward"
+PASTA_ENTRADA      = "data/real/ward"
 PASTA_SAIDA        = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift_left_wrist")
 ROTULO             = "label"
 #FEATURES_ORIGINAIS = ['l2eft_wrist_acc_x', 'left_wrist_acc_y', 'left_wrist_acc_z', 'left_wrist_gyro_x', 'left_wrist_gyro_y', 'right_wrist_acc_x', 'right_wrist_acc_y', 'right_wrist_acc_z', 'right_wrist_gyro_x', 'right_wrist_gyro_y', 'waist_acc_x', 'waist_acc_y', 'waist_acc_z', 'waist_gyro_x', 'waist_gyro_y', 'left_ankle_acc_x', 'left_ankle_acc_y', 'left_ankle_acc_z', 'left_ankle_gyro_x', 'left_ankle_gyro_y', 'right_ankle_acc_x', 'right_ankle_acc_y', 'right_ankle_acc_z', 'right_ankle_gyro_x', 'right_ankle_gyro_y']
@@ -173,7 +174,7 @@ FEATURES_ORIGINAIS = ['left_wrist_acc_x', 'left_wrist_acc_y', 'left_wrist_acc_z'
 
 
 
-PASTA_ENTRADA      = "datasetsNew/sw_sp/geotec_sp"
+PASTA_ENTRADA      = "data/real/sw_sp/geotec_sp"
 PASTA_SAIDA        = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 ROTULO             = "rotulo"
 FEATURES_ORIGINAIS = ['x_acc', 'y_acc', 'z_acc', 'x_gyro', 'y_gyro', 'z_gyro']
@@ -196,7 +197,7 @@ CONJ_TESTE = [
 
 
 # geotec_sw:
-PASTA_ENTRADA      = "datasetsNew/sw_sp/geotec_sw"
+PASTA_ENTRADA      = "data/real/sw_sp/geotec_sw"
 PASTA_SAIDA        = os.path.join(PASTA_ENTRADA, "resultados_catch24_drift")
 ROTULO             = "rotulo"
 FEATURES_ORIGINAIS = ['x_acc', 'y_acc', 'z_acc', 'x_gyro', 'y_gyro', 'z_gyro']
@@ -1001,34 +1002,7 @@ def carregar_posicoes_drift(csv_path):
     return drift_map
 
 
-def gerar_scores_a_partir_de_posicoes(num_rows, drift_indices, phi_b):
-    scores = np.zeros(num_rows, dtype=np.float64)
-    sem_drift = 1.0
-    current_score = 0.0
 
-    flags = np.zeros(num_rows, dtype=bool)
-    if len(drift_indices) > 0:
-        drift_indices = drift_indices[(drift_indices >= 0) & (drift_indices < num_rows)]
-        flags[drift_indices] = True
-
-    for linha in range(num_rows):
-        flag = flags[linha]
-        if flag:
-            phi = phi_b * math.log(1 + sem_drift)
-            if phi > 1:
-                phi = 1
-            score_ant = scores[linha - 1] if linha > 1 else 0.0
-            current_score = (1 + 1 / math.log(1 + sem_drift)) + (1 - phi) * score_ant
-            sem_drift = 0
-        else:
-            sem_drift += 1
-            phi = phi_b * math.log(1 + sem_drift)
-            if phi > 1:
-                phi = 1
-            score_ant = scores[linha - 1] if linha > 1 else 0.0
-            current_score = (1 - phi) * score_ant
-        scores[linha] = current_score
-    return scores
 
 
 def get_drift_enriched_df(item, detector_name, scaler_name, phi_b, id_fold, split_name, pasta_saida: str):
