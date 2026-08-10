@@ -54,10 +54,10 @@ data/real/README.md` lists the source of each dataset and the preprocessing step
 │   ├── synthetic/
 │   │   ├── README.md               # CaDrift dependency, folder naming, license
 │   │   ├── environment-synthetic.yml
-│   │   ├── sintetico.py
+│   │   ├── sintetico.py            # Code for generating synthetic datasets
 │   │   └── {Frequency}_{Type}_{Feature}_/   # B1-B20, one folder per scenario
 │   └── real/
-│       └── README.md               # Source links + preprocessing (raw data not included)
+│       └── README.md               # Source links 
 ├── src/
 │   ├── scoring.py            # Algorithm 1: pure per-feature drift-score function (Section 4)
 │   ├── preprocessing/        # Per-dataset preprocessing (Section 5.1)
@@ -66,10 +66,9 @@ data/real/README.md` lists the source of each dataset and the preprocessing step
 ├── results/
 │   ├── real_results/         # Results obtained on real-world datasets
 │   ├── synthetic_results/    # Results obtained on synthetic datasets
-│   └── figures/              # Scripts reproducing Figures 5-10 and S-1 to S-7
+│   └── figures/              # Figures 5-10 and S-1 to S-7
 ├── slurm/                    # C3HPC SLURM job scripts
 ├── environment.yml
-├── CITATION.cff
 └── LICENSE
 ```
 
