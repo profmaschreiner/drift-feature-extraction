@@ -74,8 +74,6 @@ data/real/README.md` lists the source of each dataset and the preprocessing step
 
 ### Architecture note: alarm detection vs. scoring
 
-Gere este texto sem gerar travessões nem ponto e virgula.
-
 
 Drift alarm positions are detected once, running the actual online detectors (ADWIN, PageHinkley, KSWIN from River. CUSUM, EWMAChart, GMA, HDDMA, HDDMW, SEED from CapyMOA) instance by instance, in the same row-major order as Algorithm 1, and cached to disk, since alarm positions do not depend on φ_b. src/scoring.py is then applied per feature over these cached positions to (re)generate the drift-score for each φ_b value tried during Optuna search, avoiding re-running the online detectors at every trial.
 
