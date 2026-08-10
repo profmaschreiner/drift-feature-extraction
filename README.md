@@ -46,29 +46,33 @@ data/real/README.md` lists the source of each dataset and the preprocessing step
 
 ---
 
-## 3. Repository structure```
-.
-├── data/
-│   ├── synthetic/
-│   │   ├── README.md               # CaDrift dependency and folder naming
-│   │   ├── environment-synthetic.yml
-│   │   ├── synthetic.py
-│   │   └── {Frequency}_{Type}_{Feature}_/   # B1-B20, one folder per scenario
-│   └── real/
-│       └── README.md               # Source links 
-├── src/
-│   ├── preprocessing/      # Per-dataset preprocessing (Section 5.1)
-│   ├── experiments/        # Scenario runners (C0-C3), Optuna search (Section 5.3)
-│   └── analysis/           # Statistical tests, feature importance and extraction cost
-├── results/
-│   ├── real_results/        # Results obtained on real-world datasets
-│   ├── synthetic_results/   # Results obtained on synthetic datasets
-│   └── figures/             # Scripts reproducing Figures 5-10 and S-1 to S-7
-├── slurm/                   # C3HPC SLURM job scripts
-├── environment.yml
-├── CITATION.cff
-└── LICENSE
+## 3. Estrutura do repositório
+
 ```
+.
+├── dados/
+│   ├── sintético/
+│   │   ├── README.md               # Dependência do CaDrift, nomeação de pastas
+│   │   ├── ambiente-sintético.yml
+│   │   ├── sintetico.py
+│   │   └── {Frequência}_{Tipo}_{Feature}_/   # B1-B20, uma pasta por cenário
+│   └── real/
+│       └── README.md               # Links de origem + pré-processamento (dados brutos não incluídos)
+├── src/
+│   ├── scoring.py            # Algoritmo 1: função pura de score por feature (Seção 4)
+│   ├── pré-processamento/     # Pré-processamento por dataset (Seção 5.1)
+│   ├── experimentos/          # Corredores de cenário (C0-C3), busca Optuna (Seção 5.3)
+│   └── análise/               # Testes estatísticos, importância de característica, custo de extração
+├── resultados/
+│   ├── real_results/          # Resultados obtidos em conjuntos de dados do mundo real
+│   ├── sintético_results/     # Resultados obtidos em conjuntos de dados sintéticos
+│   └── figuras/               # Scripts reproduzindo Figuras 5-10 e S-1 a S-7
+├── slurm/                     # Scripts de trabalho SLURM C3HPC
+├── ambiente.yml
+├── CITAÇÃO.cff
+└── LICENÇA
+```
+
 Architecture note: alarm detection vs. scoring
 
 Drift alarm positions are detected once — running the actual online detectors (ADWIN, PageHinkley, KSWIN from River; CUSUM, EWMAChart, GMA, HDDMA, HDDMW, SEED from CapyMOA) instance by instance, in the same row-major order as Algorithm 1 — and cached to disk, since alarm positions do not depend on φ_b. src/scoring.py is then applied per feature over these cached positions to (re)generate the drift-score for each φ_b value tried during Optuna search, avoiding re-running the online detectors at every trial.

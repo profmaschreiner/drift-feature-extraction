@@ -1,0 +1,16 @@
+name: drift-feature-extraction
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13.7
+  - scikit-learn=1.7.2
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - pip
+  - pip:
+      - capymoa==0.12.0
+      - river==0.22.0
+      - pycatch22==0.4.5
+      - optuna==4.7.0
