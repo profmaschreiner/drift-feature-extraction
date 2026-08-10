@@ -46,31 +46,31 @@ data/real/README.md` lists the source of each dataset and the preprocessing step
 
 ---
 
-## 3. Estrutura do repositório
+## 3. Repository structure
 
 ```
 .
-├── dados/
-│   ├── sintético/
-│   │   ├── README.md               # Dependência do CaDrift, nomeação de pastas
-│   │   ├── ambiente-sintético.yml
+├── data/
+│   ├── synthetic/
+│   │   ├── README.md               # CaDrift dependency, folder naming, license
+│   │   ├── environment-synthetic.yml
 │   │   ├── sintetico.py
-│   │   └── {Frequência}_{Tipo}_{Feature}_/   # B1-B20, uma pasta por cenário
+│   │   └── {Frequency}_{Type}_{Feature}_/   # B1-B20, one folder per scenario
 │   └── real/
-│       └── README.md               # Links de origem + pré-processamento (dados brutos não incluídos)
+│       └── README.md               # Source links + preprocessing (raw data not included)
 ├── src/
-│   ├── scoring.py            # Algoritmo 1: função pura de score por feature (Seção 4)
-│   ├── pré-processamento/     # Pré-processamento por dataset (Seção 5.1)
-│   ├── experimentos/          # Corredores de cenário (C0-C3), busca Optuna (Seção 5.3)
-│   └── análise/               # Testes estatísticos, importância de característica, custo de extração
-├── resultados/
-│   ├── real_results/          # Resultados obtidos em conjuntos de dados do mundo real
-│   ├── sintético_results/     # Resultados obtidos em conjuntos de dados sintéticos
-│   └── figuras/               # Scripts reproduzindo Figuras 5-10 e S-1 a S-7
-├── slurm/                     # Scripts de trabalho SLURM C3HPC
-├── ambiente.yml
-├── CITAÇÃO.cff
-└── LICENÇA
+│   ├── scoring.py            # Algorithm 1: pure per-feature drift-score function (Section 4)
+│   ├── preprocessing/        # Per-dataset preprocessing (Section 5.1)
+│   ├── experiments/          # Scenario runners (C0-C3), Optuna search (Section 5.3)
+│   └── analysis/             # Statistical tests, feature importance, extraction cost
+├── results/
+│   ├── real_results/         # Results obtained on real-world datasets
+│   ├── synthetic_results/    # Results obtained on synthetic datasets
+│   └── figures/              # Scripts reproducing Figures 5-10 and S-1 to S-7
+├── slurm/                    # C3HPC SLURM job scripts
+├── environment.yml
+├── CITATION.cff
+└── LICENSE
 ```
 
 Architecture note: alarm detection vs. scoring
