@@ -1,6 +1,6 @@
 # Using Concept Drift Detectors as Feature Extractors for Sequential Data
 
-Companion code and synthetic datasets for the paper *"Using Concept Drift Detectors as Feature Extractors for Sequential Data"*, submitted to **Knowledge-Based Systems (Elsevier)**.
+Companion code and synthetic datasets for the paper *"Using Concept Drift Detectors as Feature Extractors for Sequential Data"*, submitted to **Applied Soft Computing (Elsevier)**.
 
 The methodology transforms **concept drift detector alarms** into compact, interpretable, per-variable features (2*n*-dimensional, up to 11× smaller than *catch22*) for supervised classification of multivariate sequential data. Evaluated with **9 detectors** across **4 experimental scenarios**, on **20 synthetic** (CaDrift) and **16 real** datasets spanning HAR, industrial and environmental domains.
 
