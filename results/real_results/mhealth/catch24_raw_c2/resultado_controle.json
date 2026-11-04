@@ -1,0 +1,17 @@
+{
+    "variante": "c2",
+    "detector_fonte": "-",
+    "fonte_hiperparametros": "datasetsNew/dados_mhealth/resultados_catch24_drift/catch24/resultado_otimizacao.json",
+    "janela_catch24": 70,
+    "params": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 297,
+        "rf_max_depth": 20,
+        "rf_min_samples_split": 10,
+        "rf_min_samples_leaf": 15,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "f1_fonte": 0.9493622599441114,
+    "macro_f1": 0.9497104595242343
+}

@@ -1,0 +1,25 @@
+{
+    "cenario": "C3",
+    "controle": "EWMA_ALARM",
+    "detector_referencia": "SEED",
+    "fonte_hiperparametros": "datasetsNew/occ/resultados_catch24_drift_rerun/catch24_drift/EWMAChart/resultado_otimizacao.json",
+    "phi_b": 2.6136104632366273e-06,
+    "horizonte_h": 39881,
+    "lambda_0": 2.5074596925854416e-05,
+    "fator_escolhido": 2.0,
+    "lambda_escolhido": 5.014919385170883e-05,
+    "janela_catch24": 3,
+    "params_rf": {
+        "scaler_model": "robust",
+        "rf_n_estimators": 59,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 5,
+        "rf_min_samples_leaf": 16,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "scaler_detectors": "standard",
+    "f1_algorithm1": 0.7382191292179114,
+    "protocolo": "nao aninhado (mesmo do experimento original)",
+    "macro_f1": 0.6621675516854324
+}

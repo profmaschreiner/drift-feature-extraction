@@ -1,0 +1,17 @@
+{
+    "variante": "c2",
+    "detector_fonte": "-",
+    "fonte_hiperparametros": "datasetsNew/occ/resultados_catch24_drift/catch24/resultado_otimizacao.json",
+    "janela_catch24": 3,
+    "params": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 167,
+        "rf_max_depth": 17,
+        "rf_min_samples_split": 12,
+        "rf_min_samples_leaf": 5,
+        "rf_max_features": "log2",
+        "rf_bootstrap": true
+    },
+    "f1_fonte": 0.7530703041566288,
+    "macro_f1": 0.7992717599015152
+}

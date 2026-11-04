@@ -1,0 +1,25 @@
+{
+    "cenario": "C3",
+    "controle": "EWMA_ALARM",
+    "detector_referencia": "KSWIN",
+    "fonte_hiperparametros": "datasetsNew/gait_default/resultados_catch24_drift/catch24_drift/KSWIN/resultado_otimizacao.json",
+    "phi_b": 5.363153427470485e-05,
+    "horizonte_h": 2701,
+    "lambda_0": 0.00037023324694557573,
+    "fator_escolhido": 0.5,
+    "lambda_escolhido": 0.00018511662347278786,
+    "janela_catch24": 90,
+    "params_rf": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 195,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 20,
+        "rf_min_samples_leaf": 7,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": false
+    },
+    "scaler_detectors": "robust",
+    "f1_algorithm1": 0.9981723055285633,
+    "protocolo": "nao aninhado (mesmo do experimento original)",
+    "macro_f1": 0.9985513625474178
+}

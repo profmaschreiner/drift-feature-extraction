@@ -1,0 +1,17 @@
+{
+    "scenario": "catch24_drift",
+    "detector_name": "KSWIN",
+    "best_macro_f1": 0.958558668093677,
+    "best_params": {
+        "phi_b": 0.0036298527786703507,
+        "scaler_detectors": "robust",
+        "scaler_model": "robust",
+        "rf_n_estimators": 158,
+        "rf_max_depth": 4,
+        "rf_min_samples_split": 20,
+        "rf_min_samples_leaf": 7,
+        "rf_max_features": null,
+        "rf_bootstrap": false
+    },
+    "fixed_catch24_window_size": 90
+}

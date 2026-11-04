@@ -1,0 +1,9 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+controle_c2raw_p2_hand,0,[0],253233,34259,325,306
+controle_c2raw_p2_hand,1,[1],250420,37072,325,306
+controle_c2raw_p2_hand,2,[2],252753,34739,325,306
+controle_c2raw_p2_hand,3,[3],251383,36109,325,306
+controle_c2raw_p2_hand,4,[4],249778,37714,325,306
+controle_c2raw_p2_hand,5,[5],251652,35840,325,306
+controle_c2raw_p2_hand,6,[6],252085,35407,325,306
+controle_c2raw_p2_hand,7,[7],251140,36352,325,306

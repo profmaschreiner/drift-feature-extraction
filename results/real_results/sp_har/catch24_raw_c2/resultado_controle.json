@@ -1,0 +1,17 @@
+{
+    "variante": "c2",
+    "detector_fonte": "-",
+    "fonte_hiperparametros": "datasetsNew/sw_sp/geotec_sp/resultados_catch24_drift/catch24/resultado_otimizacao.json",
+    "janela_catch24": 130,
+    "params": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 172,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 17,
+        "rf_min_samples_leaf": 16,
+        "rf_max_features": null,
+        "rf_bootstrap": false
+    },
+    "f1_fonte": 0.6859199042123156,
+    "macro_f1": 0.7018719093068257
+}

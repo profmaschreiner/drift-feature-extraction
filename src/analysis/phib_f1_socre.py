@@ -7,12 +7,12 @@ detectors ranked by mean macro F1-score.
 Two scenarios: C1 (drift) and C3 (catch24_drift).
 
 Produces per scenario:
-  1. phi_b strip plot (all 9 detectors) with indicator per point.
+  1. phi_b strip plot (all 9 detectors) with bias indicator per point.
   2. RF hyperparameter panel (best vs worst detector).
 
-Indicator (marker edge colour):
-  Red   → memory > min class segment  (unit)
-  Grey  → memory ≤ min class segment  (class)
+Bias indicator (marker edge colour):
+  Red   → memory > min class segment  (potential bias)
+  Grey  → memory ≤ min class segment  (no bias)
   White → dataset files not found     (unknown)
 """
 
@@ -35,6 +35,17 @@ OUTPUT_DIR    = SUMMARY_DIR / "figuras_artigo_delta"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DATASETS_ROOT = Path("exp_otimizacao/result_reais_completo/datasets")
+
+# Fonte dos resultados: a MESMA do teste_reais_agr_datasets.py, que gera as
+# Tabelas S-11 e S-15, os testes estatisticos e a Figura 7, isto e, a pasta
+# original <dataset>/<cenario>/<detector>/. A pasta de rerun
+#   <dataset>/resultados_catch24_drift_rerun/<cenario>/<detector>/
+# so e usada se o arquivo pedido nao existir na pasta original (com aviso).
+# Antes o rerun tinha prioridade, e o MH (HDDMA) saia com F1 diferente da
+# Tabela S-15 (C1 75,94 em vez de 82,30 e C3 93,18 em vez de 96,38).
+# O F1 e lido de df_f1_all.csv (coluna RF, media dos folds, em %).
+RERUN_DIR     = "resultados_catch24_drift_rerun"
+COLUNA_F1     = "RF"
 DECAY_THRESHOLD = 0.01   # S_j < 1% → memory exhausted
 
 SCENARIOS = {"C1": "drift", "C3": "catch24_drift"}
@@ -90,10 +101,10 @@ DET_STYLE = {
     "SEED"                  : ("#333333", "h"),   # dark grey
 }
 
-#  edge colours — 3 levels
+# Bias edge colours — 3 levels
 EDGE_NONE     = "#555555"   # dark grey → within class  (memory < mean class segment)
 EDGE_POSSIBLE = "#E69F00"   # orange    → between classes (mean class ≤ memory < mean block)
-EDGE_UNIT     = "#CC0000"   # red       → unit  (memory ≥ mean block size)
+EDGE_BIAS     = "#CC0000"   # red       → possible bias  (memory ≥ mean block size)
 EDGE_UNKNOWN  = "white"     # white     → unknown
 
 RF_PARAMS = [
@@ -224,7 +235,7 @@ def bias_level(phi_b, stats: dict | None) -> str:
     Levels:
       EDGE_NONE     : memory < mean class segment  → within class
       EDGE_POSSIBLE : mean class ≤ memory < mean block size → between classes
-      EDGE_UNIT     : memory ≥ mean block size → unit
+      EDGE_BIAS     : memory ≥ mean block size → possible bias
       EDGE_UNKNOWN  : phi_b or stats missing
     """
     if phi_b is None or (isinstance(phi_b, float) and np.isnan(phi_b)):
@@ -237,7 +248,7 @@ def bias_level(phi_b, stats: dict | None) -> str:
     elif mem < stats["block_size"]:
         return EDGE_POSSIBLE
     else:
-        return EDGE_UNIT
+        return EDGE_BIAS
 
 
 # Pre-compute segment stats once
@@ -259,13 +270,56 @@ for ds in ABBREV:
 # CSV / JSON LOADING
 # ============================================================
 
-def read_table(path):
-    df = pd.read_csv(path, index_col=0, decimal=",")
+def pasta_resultado(ds: str, cenario: str, detector: str | None,
+                    arquivos=("df_f1_all.csv",)) -> Path:
+    """Pasta do resultado na mesma fonte da Tabela S-15 (pasta original).
+    O rerun so e usado se nenhum dos arquivos pedidos existir na original."""
+    if detector is None:
+        return RESULT_ROOT / ds / cenario
+    orig = RESULT_ROOT / ds / cenario / detector
+    if any((orig / a).exists() for a in arquivos):
+        return orig
+    rr = RESULT_ROOT / ds / RERUN_DIR / cenario / detector
+    if any((rr / a).exists() for a in arquivos):
+        print(f"  [AVISO] {ds}/{cenario}/{detector}: {arquivos} ausente na pasta "
+              f"original, usando o rerun")
+        return rr
+    return orig
+
+
+def f1_medio(pasta: Path) -> float:
+    """Macro F1 (%) medio dos folds, como na Tabela S-15."""
+    arq = pasta / "df_f1_all.csv"
+    if not arq.exists():
+        return np.nan
+    df = pd.read_csv(arq)
+    if not {"fold", COLUNA_F1}.issubset(df.columns):
+        print(f"  [WARN] colunas inesperadas em {arq}")
+        return np.nan
+    return float(100 * df.groupby("fold")[COLUNA_F1].mean().mean())
+
+
+def build_mean_df() -> pd.DataFrame:
+    linhas = {}
+    for ds in ABBREV:
+        if not (RESULT_ROOT / ds).exists():
+            print(f"  [MISS] dataset {ds}")
+            continue
+        r = {"baseline": f1_medio(pasta_resultado(ds, "baseline", None)),
+             "catch24":  f1_medio(pasta_resultado(ds, "catch24", None))}
+        for det in ALL_DETECTORS:
+            for cen in ("drift", "catch24_drift"):
+                pasta = pasta_resultado(ds, cen, det)
+                r[f"{cen}_{det}"] = f1_medio(pasta)
+
+        linhas[ds] = r
+    df = pd.DataFrame.from_dict(linhas, orient="index")
     df.index.name = "base"
     return df
 
-mean_df  = read_table(MEAN_CSV)
+mean_df  = build_mean_df()
 datasets = mean_df.index.tolist()
+mean_df.to_csv(OUTPUT_DIR / "f1_medio_por_dataset_usado_na_figura.csv")
 
 def classify_col(col):
     col = col.strip()
@@ -307,12 +361,14 @@ def _normalise_json(d):
 def load_params(datasets, scenario_folder, detector):
     rows = []
     for ds in datasets:
-        base = RESULT_ROOT / ds / scenario_folder / detector
+        # mesma pasta do F1 (df_f1_all.csv), para phi_b e F1 virem do mesmo run
+        base = pasta_resultado(ds, scenario_folder, detector)
         p = base / "resultado_otimizacao.json"
         if not p.exists():
             p = base / "resultado_otimizacao_rf.json"
         if not p.exists():
-            print(f"  [MISS] {ds}/{scenario_folder}/{detector}")
+            print(f"  [MISS] {ds}/{scenario_folder}/{detector}: sem json de "
+                  f"otimizacao em {base}")
             rows.append({"base": ds})
             continue
         with open(p) as f:
@@ -414,7 +470,7 @@ def phi_b_strip_plot_all(dfs: dict, scenario_label: str, ranked: list,
                markeredgecolor=EDGE_POSSIBLE, markeredgewidth=1.4, markersize=7,
                label="Mem. between classes (mean class ≤ mem < mean block)"),
         Line2D([0], [0], marker="o", color="w", markerfacecolor="#888888",
-               markeredgecolor=EDGE_UNIT,     markeredgewidth=1.4, markersize=7,
+               markeredgecolor=EDGE_BIAS,     markeredgewidth=1.4, markersize=7,
                label="Mem. beyond units (mem ≥ mean units)"),
         Line2D([0], [0], marker="o", color="w", markerfacecolor="#888888",
                markeredgecolor=EDGE_UNKNOWN,  markeredgewidth=1.4, markersize=7,
@@ -567,7 +623,7 @@ def phi_b_strip_plot_top3(dfs: dict, scenario_label: str, scenario_folder: str,
                markeredgecolor=EDGE_POSSIBLE, markeredgewidth=1.8, markersize=7,
                label="Mem. between classes (mean class ≤ mem < mean block)"),
         Line2D([0],[0], marker="o", color="w", markerfacecolor="#888888",
-               markeredgecolor=EDGE_UNIT,     markeredgewidth=1.8, markersize=7,
+               markeredgecolor=EDGE_BIAS,     markeredgewidth=1.8, markersize=7,
                label="Mem. beyond units (mem ≥ mean units)"),
         Line2D([0],[0], marker="o", color="w", markerfacecolor="#888888",
                markeredgecolor=EDGE_UNKNOWN,  markeredgewidth=1.8, markersize=7,
@@ -729,7 +785,7 @@ def save_summary_csv(dfs, ranked, scenario_label, out_dir):
                 row["bias_level"] = {
                     EDGE_NONE    : "within_class",
                     EDGE_POSSIBLE: "between_classes",
-                    EDGE_UNIT    : "possible_bias",
+                    EDGE_BIAS    : "possible_bias",
                     EDGE_UNKNOWN : "unknown",
                 }.get(bias_level(phi, stats), "unknown")
             else:
@@ -1021,7 +1077,7 @@ def _build_gain_df(clabel: str, folder: str, ref_col: str,
     level_map = {
         EDGE_NONE    : "within_class",
         EDGE_POSSIBLE: "between_classes",
-        EDGE_UNIT    : "possible_bias",
+        EDGE_BIAS    : "possible_bias",
         EDGE_UNKNOWN : "unknown",
     }
     rows = []
@@ -1258,7 +1314,7 @@ def plot_memory_scale_vs_gain(dfs_by_scenario: dict, mean_df: pd.DataFrame,
     c2_col = next((c for c, m in col_meta.items() if m[0] == "C2"), None)
 
     # Paleta LOCAL desta figura (distinta das constantes globais EDGE_NONE/
-    # EDGE_POSSIBLE/EDGE_UNIT, que permanecem inalteradas para as demais
+    # EDGE_POSSIBLE/EDGE_BIAS, que permanecem inalteradas para as demais
     # figuras do script). Tons da família de azuis do artigo (ancorada em
     # #355C7D), do mais escuro ao mais claro, em vez de cinza/laranja/
     # vermelho — evita confusão com a paleta de magnitude do Cliff's delta,
@@ -1300,6 +1356,12 @@ def plot_memory_scale_vs_gain(dfs_by_scenario: dict, mean_df: pd.DataFrame,
 
         # Save CSV
         df_plot.to_csv(out_dir / f"memory_scale_vs_gain_{clabel}.csv", index=False)
+        print(f"\n[CONFERIR com a Tabela S-15] {clabel}: ganho do melhor detector (p.p.)")
+        for _, r in df_plot.sort_values("level").iterrows():
+            print(f"  {r['dataset']:10s} {r['level']:16s} {r['det']:6s} "
+                  f"gain={r['gain']:6.2f}  phi_b={r['phi_b']:.2e}")
+        for g, sub in df_plot.groupby("level"):
+            print(f"  grupo {g:16s} n={len(sub):2d}  mediana={sub['gain'].median():.2f}")
 
         # Determine y-axis range with margin for labels
         y_max = df_plot["gain"].max() * 1.15
@@ -1325,7 +1387,7 @@ def plot_memory_scale_vs_gain(dfs_by_scenario: dict, mean_df: pd.DataFrame,
         
         fig.suptitle(
             "Memory scale of best detector vs F1 gain\n"
-            "Horizontal line = group average",
+            "Horizontal line = group median",
             fontsize=14
         )
         fig.tight_layout()
@@ -1393,3 +1455,195 @@ for clabel, folder in SCENARIOS.items():
 plot_memory_scale_vs_gain(
     dfs_by_scenario, mean_df, col_meta, DATASET_STATS, OUTPUT_DIR
 )
+
+# ============================================================
+# GANHO vs HORIZONTE DE MEMÓRIA / TAMANHO DA UNIDADE
+# h = horizonte da eq:horizonte (S_j cai a e^{-1}), o mesmo da Seção 4.
+# Eixo x: h / tamanho médio da unidade experimental (log), linha em 1.
+# Eixo y: ganho do melhor detector. (a) C1 - C0, (b) C3 - C2.
+# Descritivo: 16 pontos, melhor detector escolhido a posteriori, sem teste.
+# ============================================================
+
+def horizon_instances(phi_b: float, k_max: int = 20_000_000, chunk: int = 1_000_000) -> int:
+    """Menor h com sum_{k=1}^{h} -ln(1 - min(1, phi_b ln(1+k))) >= 1 (eq:horizonte)."""
+    if phi_b is None or not np.isfinite(phi_b) or phi_b <= 0:
+        return np.nan
+    acc, k0 = 0.0, 1
+    while k0 <= k_max:
+        k = np.arange(k0, min(k0 + chunk, k_max + 1), dtype=float)
+        phi = np.minimum(1.0, phi_b * np.log1p(k))
+        if np.any(phi >= 1.0):                      # saturação: S_j zera
+            idx = int(np.argmax(phi >= 1.0))
+            soma = acc + np.cumsum(-np.log1p(-phi[:idx]))
+            hit = np.flatnonzero(soma >= 1.0)
+            return int(k[hit[0]]) if hit.size else int(k[idx])
+        soma = acc + np.cumsum(-np.log1p(-phi))
+        hit = np.flatnonzero(soma >= 1.0)
+        if hit.size:
+            return int(k[hit[0]])
+        acc = float(soma[-1]); k0 += chunk
+    return k_max
+
+
+COR_PONTO, COR_TEXTO, COR_LINHA = "#355C7D", "#16263A", "#7A7A7A"
+# rotulos colocados a esquerda do ponto para nao encostar em pontos vizinhos
+ESQUERDA = {"C1": {"W-LAnkle", "W-LWrist", "P2-Chest", "W-RWrist"}, "C3": {"P2-Chest"}}
+
+
+def _rotulos(ax, d, gap, esquerda=()):
+    """Rotulo a direita do ponto; sobreposicoes resolvidas so na vertical,
+    entre rotulos cujos pontos estao proximos no eixo x (log)."""
+    pts = d[["h_over_unit", "gain", "dataset"]].copy()
+    pts["lx"] = np.log10(pts["h_over_unit"])
+    pts["ty"] = pts["gain"].astype(float)
+    pts["esq"] = pts["dataset"].isin(esquerda)
+    pts = pts.sort_values("ty").reset_index(drop=True)
+    for _ in range(200):
+        mudou = False
+        for i in range(len(pts)):
+            for j in range(i + 1, len(pts)):
+                if (pts.esq[i] == pts.esq[j] and abs(pts.lx[i] - pts.lx[j]) < 0.55
+                        and pts.ty[j] - pts.ty[i] < gap):
+                    meio = (pts.ty[i] + pts.ty[j]) / 2
+                    pts.loc[i, "ty"] = meio - gap / 2 - 1e-6
+                    pts.loc[j, "ty"] = meio + gap / 2 + 1e-6
+                    mudou = True
+        if not mudou:
+            break
+    for _, r in pts.iterrows():
+        x, y, ty = r.h_over_unit, r.gain, r.ty
+        esq = r.dataset in esquerda
+        tx = x / 1.35 if esq else x * 1.35
+        ax.annotate(r.dataset, xy=(x, y), xytext=(tx, ty), fontsize=12, color=COR_TEXTO,
+                    va="center", ha="right" if esq else "left", zorder=4,
+                    arrowprops=None if abs(ty - y) < gap * 0.35 else
+                    dict(arrowstyle="-", color="#9A9A9A", lw=0.5, shrinkA=0, shrinkB=2.5))
+
+
+def _plot_horizonte(t, saida):
+    fig, axs = plt.subplots(2, 1, figsize=(7.2, 9.2), sharex=True)
+    titulos = {"C1": "(a) C1 best $-$ C0", "C3": "(b) C3 best $-$ C2 (catch22)"}
+    for ax, cen in zip(axs, ["C1", "C3"]):
+        d = t[t.scenario == cen]
+        ymax = d.gain.max()
+        gap = 0.062 * (ymax * 1.12 + 1.5)
+        ax.axvspan(1.0, 100, color="#F2F2F2", zorder=0, lw=0)
+        ax.axvline(1.0, color=COR_LINHA, lw=1.0, ls="--", zorder=1)
+        ax.axhline(0.0, color="#C8C8C8", lw=0.8, zorder=1)
+        dentro = d.h < d.class_seg
+        ax.scatter(d.h_over_unit[dentro], d.gain[dentro], s=54, marker="o", c=COR_PONTO,
+                   edgecolors="white", linewidths=0.6, zorder=3,
+                   label="$h$ shorter than the mean class segment")
+        ax.scatter(d.h_over_unit[~dentro], d.gain[~dentro], s=64, marker="^", c="#C0504D",
+                   edgecolors="white", linewidths=0.6, zorder=3,
+                   label="$h$ longer than the mean class segment")
+        _rotulos(ax, d, gap, ESQUERDA.get(cen, ()))
+        ax.set_xscale("log")
+        ax.set_xlim(3e-4, 100)
+        ax.set_ylim(-1.5, ymax * 1.12)
+        ax.set_title(titulos[cen], loc="left", fontsize=14)
+        ax.set_ylabel("F1 gain (percentage points)", fontsize=13)
+        ax.tick_params(labelsize=12)
+        ax.grid(axis="both", color="#E6E6E6", lw=0.5, zorder=0)
+        ax.set_axisbelow(True)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+        ax.text(1.15, -0.8, "$h$ beyond the unit", fontsize=11, color=COR_LINHA,
+                ha="left", va="center")
+    h_, l_ = axs[1].get_legend_handles_labels()
+    fig.legend(h_, l_, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2,
+               fontsize=12, handletextpad=0.3, columnspacing=1.2)
+    axs[-1].set_xlabel("Memory horizon $h$ / mean size of the experimental unit", fontsize=13)
+    fig.tight_layout()
+    for ext in ("pdf", "png"):
+        fig.savefig(f"{saida}.{ext}", bbox_inches="tight", dpi=300)
+    plt.close(fig)
+
+
+def plot_horizon_vs_gain(dfs_by_scenario: dict, mean_df: pd.DataFrame,
+                         col_meta: dict, dataset_stats: dict, out_dir: Path):
+    c0_col = next((c for c, m in col_meta.items() if m[0] == "C0"), None)
+    c2_col = next((c for c, m in col_meta.items() if m[0] == "C2"), None)
+    configs = [("C1", "drift", c0_col, "(a) C1 best $-$ C0"),
+               ("C3", "catch24_drift", c2_col, "(b) C3 best $-$ C2 (catch22)")]
+    inv = {v: k for k, v in ABBREV.items()}
+    tabelas = []
+    for clabel, folder, ref_col, titulo in configs:
+        if ref_col is None:
+            continue
+        d = _build_gain_df(clabel, folder, ref_col, dfs_by_scenario.get(folder, {}),
+                           mean_df, col_meta, dataset_stats)
+        if d.empty:
+            continue
+        d["h"] = [horizon_instances(p) for p in d["phi_b"]]
+        d["unit"] = [(dataset_stats.get(inv.get(n, n)) or {}).get("block_size", np.nan)
+                     for n in d["dataset"]]
+        d["class_seg"] = [(dataset_stats.get(inv.get(n, n)) or {}).get("mean_seg", np.nan)
+                          for n in d["dataset"]]
+        d["h_over_unit"] = d["h"] / d["unit"]
+        d["scenario"], d["titulo"] = clabel, titulo
+        tabelas.append(d)
+    if not tabelas:
+        print("[WARN] horizon vs gain: sem dados")
+        return
+    t = pd.concat(tabelas, ignore_index=True)
+    t.to_csv(out_dir / "horizon_vs_gain_C1_C3.csv", index=False)
+    print("\n[CONFERIR] ganho vs h/unidade")
+    for _, r in t.iterrows():
+        print(f"  {r['scenario']} {r['dataset']:10s} {r['det']:6s} phi_b={r['phi_b']:.2e} "
+              f"h={r['h']:>9,.0f} unit={r['unit']:>9,.0f} h/unit={r['h_over_unit']:.3g} "
+              f"gain={r['gain']:6.2f}")
+
+    _plot_horizonte(t, out_dir / "horizon_vs_gain_C1_C3")
+    return t
+    print(f"[OK] Horizon vs gain → {out_dir / 'horizon_vs_gain_C1_C3'}.{{pdf,png}}")
+
+
+t_horizonte = plot_horizon_vs_gain(dfs_by_scenario, mean_df, col_meta, DATASET_STATS, OUTPUT_DIR)
+
+
+# ============================================================
+# SmPh: DURAÇÃO DAS CLASSES DE TRANSIÇÃO vs h
+# As 6 classes de transição postural são as 6 de maior rótulo (7 a 12 no
+# HAPT original). O script imprime a duração de todas as classes para conferir.
+# ============================================================
+
+def smph_transition_stats(t: pd.DataFrame | None, out_dir: Path, n_transicoes: int = 6):
+    subfolder, label_col, nome_base, end_base, folds = DATASET_LAYOUTS["smartphone"]
+    data_dir = DATASETS_ROOT / subfolder
+    runs = {}                                # rótulo -> lista de durações dos segmentos
+    for idx in sorted({i for f in folds for i in f}):
+        fpath = data_dir / f"{nome_base}{idx}{end_base}"
+        if not fpath.exists():
+            continue
+        y = pd.read_csv(fpath, usecols=[label_col])[label_col].to_numpy()
+        if len(y) == 0:
+            continue
+        ini = np.r_[0, np.flatnonzero(y[1:] != y[:-1]) + 1]
+        fim = np.r_[ini[1:], len(y)]
+        for a, b in zip(ini, fim):
+            runs.setdefault(y[a], []).append(b - a)
+    if not runs:
+        print("[WARN] SmPh: arquivos não encontrados")
+        return
+    linhas = [{"classe": c, "segmentos": len(v), "media": float(np.mean(v)),
+               "mediana": float(np.median(v)), "min": int(np.min(v)), "max": int(np.max(v))}
+              for c, v in sorted(runs.items())]
+    tab = pd.DataFrame(linhas)
+    rot_tr = sorted(runs)[-n_transicoes:]
+    tab["transicao"] = tab["classe"].isin(rot_tr)
+    tab.to_csv(out_dir / "smph_duracao_classes.csv", index=False)
+    print("\n[SmPh] duração dos segmentos por classe (amostras)")
+    print(tab.to_string(index=False, float_format=lambda v: f"{v:,.1f}"))
+    tr = np.concatenate([runs[c] for c in rot_tr])
+    at = np.concatenate([runs[c] for c in runs if c not in rot_tr])
+    print(f"  transições (rótulos {rot_tr}): {len(tr)} segmentos, "
+          f"média {tr.mean():,.1f}, mediana {np.median(tr):,.1f}")
+    print(f"  atividades: {len(at)} segmentos, média {at.mean():,.1f}, mediana {np.median(at):,.1f}")
+    if t is not None:
+        for _, r in t[t["dataset"] == "SmPh"].iterrows():
+            print(f"  {r['scenario']}: h = {r['h']:,.0f}  ->  h / transição média = "
+                  f"{r['h'] / tr.mean():.2f},  h / transição mediana = {r['h'] / np.median(tr):.2f}")
+
+
+smph_transition_stats(t_horizonte, OUTPUT_DIR)

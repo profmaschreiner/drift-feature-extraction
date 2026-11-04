@@ -1,0 +1,17 @@
+{
+    "variante": "c2",
+    "detector_fonte": "-",
+    "fonte_hiperparametros": "datasetsNew/ward/resultados_catch24_drift_left_ankle/catch24/resultado_otimizacao.json",
+    "janela_catch24": 130,
+    "params": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 108,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 12,
+        "rf_min_samples_leaf": 11,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": false
+    },
+    "f1_fonte": 0.8225976844217732,
+    "macro_f1": 0.8162021499024356
+}

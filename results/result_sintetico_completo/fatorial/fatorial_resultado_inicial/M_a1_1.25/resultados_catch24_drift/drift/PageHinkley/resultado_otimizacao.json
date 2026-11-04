@@ -1,0 +1,17 @@
+{
+    "scenario": "drift",
+    "detector_name": "PageHinkley",
+    "best_macro_f1": 0.6534776549865594,
+    "best_params": {
+        "phi_b": 3.28902534260685e-06,
+        "scaler_detectors": "minmax",
+        "scaler_model": "standard",
+        "rf_n_estimators": 112,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 13,
+        "rf_min_samples_leaf": 16,
+        "rf_max_features": null,
+        "rf_bootstrap": false
+    },
+    "fixed_catch24_window_size": null
+}

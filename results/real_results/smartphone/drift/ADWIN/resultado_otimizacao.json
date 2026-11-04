@@ -1,16 +1,17 @@
 {
     "scenario": "drift",
     "detector_name": "ADWIN",
-    "best_macro_f1": 0.7239880617222808,
+    "best_macro_f1": 0.47753759686013464,
     "best_params": {
-        "phi_b": 0.0010885832429622319,
-        "scaler_detectors": "minmax",
-        "scaler_model": "minmax",
-        "rf_n_estimators": 142,
-        "rf_max_depth": 19,
-        "rf_min_samples_split": 3,
-        "rf_min_samples_leaf": 19,
+        "phi_b": 0.0017196749916289081,
+        "scaler_detectors": "standard",
+        "scaler_model": "robust",
+        "rf_n_estimators": 117,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 12,
+        "rf_min_samples_leaf": 10,
         "rf_max_features": "log2",
-        "rf_bootstrap": false
-    }
+        "rf_bootstrap": true
+    },
+    "fixed_catch24_window_size": null
 }

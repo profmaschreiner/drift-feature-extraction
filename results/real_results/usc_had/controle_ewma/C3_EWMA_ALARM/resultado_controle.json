@@ -1,0 +1,25 @@
+{
+    "cenario": "C3",
+    "controle": "EWMA_ALARM",
+    "detector_referencia": "PageHinkley",
+    "fonte_hiperparametros": "datasetsNew/usc_had/resultados_catch24_drift/catch24_drift/PageHinkley/resultado_otimizacao.json",
+    "phi_b": 0.00041083188946999295,
+    "horizonte_h": 470,
+    "lambda_0": 0.002127659574468085,
+    "fator_escolhido": 1.0,
+    "lambda_escolhido": 0.002127659574468085,
+    "janela_catch24": 130,
+    "params_rf": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 126,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 6,
+        "rf_min_samples_leaf": 9,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "scaler_detectors": "standard",
+    "f1_algorithm1": 0.8442712736713384,
+    "protocolo": "nao aninhado (mesmo do experimento original)",
+    "macro_f1": 0.8434358080048943
+}

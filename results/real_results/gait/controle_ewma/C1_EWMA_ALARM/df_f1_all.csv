@@ -1,0 +1,11 @@
+run,fold,test_bases,RF
+controle_ewma_gait,0,[0],1.0
+controle_ewma_gait,1,[1],0.9996699669158171
+controle_ewma_gait,2,[2],1.0
+controle_ewma_gait,3,[3],0.9996699669158171
+controle_ewma_gait,4,[4],0.9976897531153961
+controle_ewma_gait,5,[5],0.9976897531153961
+controle_ewma_gait,6,[6],0.9990098988062663
+controle_ewma_gait,7,[7],0.9983504862518057
+controle_ewma_gait,8,[8],0.9976897412338627
+controle_ewma_gait,9,[9],0.9976897412338627

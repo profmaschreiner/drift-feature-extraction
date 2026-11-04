@@ -1,0 +1,17 @@
+{
+    "variante": "c3",
+    "detector_fonte": "EWMAChart",
+    "fonte_hiperparametros": "datasetsNew/occ/resultados_catch24_drift_rerun/catch24_drift/EWMAChart/resultado_otimizacao.json",
+    "janela_catch24": 3,
+    "params": {
+        "scaler_model": "robust",
+        "rf_n_estimators": 59,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 5,
+        "rf_min_samples_leaf": 16,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "f1_fonte": 0.7382191292179114,
+    "macro_f1": 0.7746325948284257
+}

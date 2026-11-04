@@ -1,0 +1,11 @@
+run,fold,test_bases,RF
+controle_c2raw_w_rankle,0,"[0, 1]",0.5849489577084958
+controle_c2raw_w_rankle,1,"[2, 3]",0.768754906579049
+controle_c2raw_w_rankle,2,"[4, 5]",0.7915257182460771
+controle_c2raw_w_rankle,3,"[6, 7]",0.7534819066379147
+controle_c2raw_w_rankle,4,"[8, 9]",0.796565874344632
+controle_c2raw_w_rankle,5,"[10, 11]",0.8281474133572674
+controle_c2raw_w_rankle,6,"[12, 13]",0.8213693310548399
+controle_c2raw_w_rankle,7,"[14, 15]",0.8029814994455649
+controle_c2raw_w_rankle,8,"[16, 17]",0.8016307659962721
+controle_c2raw_w_rankle,9,"[18, 19]",0.7927181577559146

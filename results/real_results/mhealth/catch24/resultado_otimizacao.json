@@ -1,5 +1,5 @@
 {
-    "best_macro_f1": 0.9493622599441114,
+    "best_macro_f1": 0.899362259944112,
     "best_params": {
         "window_size": 70,
         "scaler_model": "standard",

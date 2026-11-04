@@ -1,0 +1,11 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+controle_c2raw_gait,0,[0],26469,2941,150,150
+controle_c2raw_gait,1,[1],26469,2941,150,150
+controle_c2raw_gait,2,[2],26469,2941,150,150
+controle_c2raw_gait,3,[3],26469,2941,150,150
+controle_c2raw_gait,4,[4],26469,2941,150,150
+controle_c2raw_gait,5,[5],26469,2941,150,150
+controle_c2raw_gait,6,[6],26469,2941,150,150
+controle_c2raw_gait,7,[7],26469,2941,150,150
+controle_c2raw_gait,8,[8],26469,2941,150,150
+controle_c2raw_gait,9,[9],26469,2941,150,150

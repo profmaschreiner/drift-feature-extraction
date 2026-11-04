@@ -1,0 +1,17 @@
+{
+    "variante": "c3",
+    "detector_fonte": "HDDMAverage",
+    "fonte_hiperparametros": "datasetsNew/dados_mhealth/resultados_catch24_drift_rerun/catch24_drift/HDDMAverage/resultado_otimizacao.json",
+    "janela_catch24": 70,
+    "params": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 92,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 7,
+        "rf_min_samples_leaf": 15,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "f1_fonte": 0.9318242023774198,
+    "macro_f1": 0.8809897224474437
+}

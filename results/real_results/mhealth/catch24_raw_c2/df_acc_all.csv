@@ -1,0 +1,11 @@
+run,fold,test_bases,RF
+controle_c2raw_mh,0,[0],0.9098041360364256
+controle_c2raw_mh,1,[1],0.7277327432254057
+controle_c2raw_mh,2,[2],0.8747088229905514
+controle_c2raw_mh,3,[3],0.9309600294907578
+controle_c2raw_mh,4,[4],0.9557355902683285
+controle_c2raw_mh,5,[5],0.8643761828504877
+controle_c2raw_mh,6,[6],0.8399573000492692
+controle_c2raw_mh,7,[7],0.9292257055870979
+controle_c2raw_mh,8,[8],0.9403203102175242
+controle_c2raw_mh,9,[9],0.8832966265127589

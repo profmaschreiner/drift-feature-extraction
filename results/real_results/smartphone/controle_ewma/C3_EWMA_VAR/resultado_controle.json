@@ -1,0 +1,25 @@
+{
+    "cenario": "C3",
+    "controle": "EWMA_VAR",
+    "detector_referencia": "CUSUM",
+    "fonte_hiperparametros": "datasetsNew/smartphone/resultados_catch24_drift_rerun/catch24_drift/CUSUM/resultado_otimizacao.json",
+    "phi_b": 0.0016541073183400025,
+    "horizonte_h": 149,
+    "lambda_0": 0.006711409395973154,
+    "fator_escolhido": 0.5,
+    "lambda_escolhido": 0.003355704697986577,
+    "janela_catch24": 110,
+    "params_rf": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 60,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 2,
+        "rf_min_samples_leaf": 13,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "scaler_detectors": "standard",
+    "f1_algorithm1": 0.6439312693368098,
+    "protocolo": "nao aninhado (mesmo do experimento original)",
+    "macro_f1": 0.6060784627241601
+}

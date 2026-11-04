@@ -1,16 +1,17 @@
 {
     "scenario": "drift",
     "detector_name": "PageHinkley",
-    "best_macro_f1": 0.7167326069250859,
+    "best_macro_f1": 0.46076426810855065,
     "best_params": {
-        "phi_b": 0.000103999067938815,
-        "scaler_detectors": "minmax",
+        "phi_b": 0.0013570237783721649,
+        "scaler_detectors": "standard",
         "scaler_model": "minmax",
-        "rf_n_estimators": 55,
-        "rf_max_depth": 11,
-        "rf_min_samples_split": 8,
-        "rf_min_samples_leaf": 18,
+        "rf_n_estimators": 169,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 4,
+        "rf_min_samples_leaf": 7,
         "rf_max_features": "sqrt",
         "rf_bootstrap": true
-    }
+    },
+    "fixed_catch24_window_size": null
 }

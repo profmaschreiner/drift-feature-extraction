@@ -1,0 +1,12 @@
+run,fold,test_bases,RF
+controle_ewma_sp,0,"[0, 1]",0.7764539181638075
+controle_ewma_sp,1,"[2, 3]",0.64555649186067
+controle_ewma_sp,2,"[4, 5]",0.5005938520985401
+controle_ewma_sp,3,"[6, 7]",0.7457648223167832
+controle_ewma_sp,4,"[8, 9]",0.6415794485625277
+controle_ewma_sp,5,"[10, 11]",0.6722943515467616
+controle_ewma_sp,6,"[12, 13]",0.6129412775000525
+controle_ewma_sp,7,"[14, 15]",0.6558534859844256
+controle_ewma_sp,8,"[16, 17]",0.6619472678348968
+controle_ewma_sp,9,"[18, 19]",0.6762149709128777
+controle_ewma_sp,10,"[20, 21, 22]",0.59399480527932

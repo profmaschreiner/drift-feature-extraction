@@ -1,0 +1,8 @@
+run,fold,test_bases,RF
+controle_ewma_usc,0,"[0, 1]",0.8648033082676091
+controle_ewma_usc,1,"[2, 3]",0.8559283736038036
+controle_ewma_usc,2,"[4, 5]",0.7753962059642762
+controle_ewma_usc,3,"[6, 7]",0.8793974745395189
+controle_ewma_usc,4,"[8, 9]",0.9257580089364827
+controle_ewma_usc,5,"[10, 11]",0.8181397624706688
+controle_ewma_usc,6,"[12, 13]",0.7846275222519005

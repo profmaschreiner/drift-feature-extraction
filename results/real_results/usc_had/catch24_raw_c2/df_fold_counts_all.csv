@@ -1,0 +1,8 @@
+run,fold,test_bases,n_train_samples,n_test_samples,n_features_common_train,n_features_after_nan_train
+controle_c2raw_usc,0,"[0, 1]",487298,73250,150,150
+controle_c2raw_usc,1,"[2, 3]",501784,58764,150,150
+controle_c2raw_usc,2,"[4, 5]",501065,59483,150,150
+controle_c2raw_usc,3,"[6, 7]",492501,68047,150,150
+controle_c2raw_usc,4,"[8, 9]",458777,101771,150,150
+controle_c2raw_usc,5,"[10, 11]",454352,106196,150,150
+controle_c2raw_usc,6,"[12, 13]",467511,93037,150,150

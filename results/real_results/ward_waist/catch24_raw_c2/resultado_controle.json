@@ -1,0 +1,17 @@
+{
+    "variante": "c2",
+    "detector_fonte": "-",
+    "fonte_hiperparametros": "datasetsNew/ward/resultados_catch24_drift_waist/catch24/resultado_otimizacao.json",
+    "janela_catch24": 130,
+    "params": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 106,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 17,
+        "rf_min_samples_leaf": 15,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": false
+    },
+    "f1_fonte": 0.69310818569265,
+    "macro_f1": 0.6904548278517446
+}

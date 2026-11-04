@@ -1,0 +1,9 @@
+run,fold,test_bases,RF
+controle_ewma_p2_chest,0,[0],0.8006101190029983
+controle_ewma_p2_chest,1,[1],0.473434756921456
+controle_ewma_p2_chest,2,[2],0.834776361089868
+controle_ewma_p2_chest,3,[3],0.8117262976680328
+controle_ewma_p2_chest,4,[4],0.786542798480897
+controle_ewma_p2_chest,5,[5],0.8687154760755447
+controle_ewma_p2_chest,6,[6],0.7398889592684732
+controle_ewma_p2_chest,7,[7],0.826350305030924

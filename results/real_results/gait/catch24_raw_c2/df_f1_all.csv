@@ -1,0 +1,11 @@
+run,fold,test_bases,RF
+controle_c2raw_gait,0,[0],0.9714399481211161
+controle_c2raw_gait,1,[1],0.9708532945897681
+controle_c2raw_gait,2,[2],0.966685251928446
+controle_c2raw_gait,3,[3],0.9696246085087585
+controle_c2raw_gait,4,[4],0.971857808185174
+controle_c2raw_gait,5,[5],0.9477141575343967
+controle_c2raw_gait,6,[6],0.9758371167260815
+controle_c2raw_gait,7,[7],0.9444920421050437
+controle_c2raw_gait,8,[8],0.9724717060093814
+controle_c2raw_gait,9,[9],0.9765206133951306

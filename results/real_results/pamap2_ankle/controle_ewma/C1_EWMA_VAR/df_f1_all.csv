@@ -1,0 +1,9 @@
+run,fold,test_bases,RF
+controle_ewma_p2_ankle,0,[0],0.6162626307088586
+controle_ewma_p2_ankle,1,[1],0.8691387235717333
+controle_ewma_p2_ankle,2,[2],0.7775399397175622
+controle_ewma_p2_ankle,3,[3],0.8190425130667192
+controle_ewma_p2_ankle,4,[4],0.691831854692424
+controle_ewma_p2_ankle,5,[5],0.7718249149589129
+controle_ewma_p2_ankle,6,[6],0.7177834355503891
+controle_ewma_p2_ankle,7,[7],0.6765123566828051

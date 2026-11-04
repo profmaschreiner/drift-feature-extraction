@@ -1,0 +1,17 @@
+{
+    "scenario": "drift",
+    "detector_name": "GeometricMovingAverage",
+    "best_macro_f1": 0.6210390174371448,
+    "best_params": {
+        "phi_b": 0.00012373458037018647,
+        "scaler_detectors": "standard",
+        "scaler_model": "standard",
+        "rf_n_estimators": 139,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 18,
+        "rf_min_samples_leaf": 15,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "fixed_catch24_window_size": null
+}

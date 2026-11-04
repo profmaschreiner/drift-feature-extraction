@@ -1,0 +1,17 @@
+{
+    "variante": "c2",
+    "detector_fonte": "-",
+    "fonte_hiperparametros": "datasetsNew/pamap2D/resultados_catch24_drift_ankle/catch24/resultado_otimizacao.json",
+    "janela_catch24": 130,
+    "params": {
+        "scaler_model": "standard",
+        "rf_n_estimators": 159,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 9,
+        "rf_min_samples_leaf": 10,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": false
+    },
+    "f1_fonte": 0.7872607959689617,
+    "macro_f1": 0.7958164502913171
+}

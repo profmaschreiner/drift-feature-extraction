@@ -1,0 +1,17 @@
+{
+    "variante": "c2",
+    "detector_fonte": "-",
+    "fonte_hiperparametros": "datasetsNew/smartphone/resultados_catch24_drift/catch24/resultado_otimizacao.json",
+    "janela_catch24": 110,
+    "params": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 200,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 13,
+        "rf_min_samples_leaf": 14,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "f1_fonte": 0.5665577658699913,
+    "macro_f1": 0.5926533434522135
+}

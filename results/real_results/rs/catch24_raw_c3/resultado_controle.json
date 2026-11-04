@@ -1,0 +1,17 @@
+{
+    "variante": "c3",
+    "detector_fonte": "ADWIN",
+    "fonte_hiperparametros": "datasetsNew/rs_default/resultados_catch24_drift/catch24_drift/ADWIN/resultado_otimizacao.json",
+    "janela_catch24": 110,
+    "params": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 119,
+        "rf_max_depth": 4,
+        "rf_min_samples_split": 12,
+        "rf_min_samples_leaf": 12,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "f1_fonte": 0.8959119194453099,
+    "macro_f1": 0.819925988424465
+}

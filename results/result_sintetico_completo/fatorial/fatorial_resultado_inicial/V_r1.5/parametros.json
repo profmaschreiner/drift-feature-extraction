@@ -1,0 +1,16 @@
+{
+  "condicao": "V",
+  "razao_sigma": 1.5,
+  "semente": 42001,
+  "N_SEGMENTO": 1680,
+  "N_ARQUIVOS": 12,
+  "SIGMA": 1.0,
+  "A": 1.0,
+  "F_L0": 420,
+  "M_L": 280,
+  "M_A0": 0.5,
+  "M_COMPENSAR_RUIDO": false,
+  "M_VAR_TOTAL": 2.0,
+  "H_G0": 280,
+  "JANELA_ACEITACAO": 50
+}

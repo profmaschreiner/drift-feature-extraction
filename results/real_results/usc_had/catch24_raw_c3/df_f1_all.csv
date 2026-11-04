@@ -1,0 +1,8 @@
+run,fold,test_bases,RF
+controle_c2raw_usc,0,"[0, 1]",0.7790879415345898
+controle_c2raw_usc,1,"[2, 3]",0.7104294575422633
+controle_c2raw_usc,2,"[4, 5]",0.6925631845330966
+controle_c2raw_usc,3,"[6, 7]",0.7091793009427412
+controle_c2raw_usc,4,"[8, 9]",0.8180720736816899
+controle_c2raw_usc,5,"[10, 11]",0.7199652647789211
+controle_c2raw_usc,6,"[12, 13]",0.6531353242657875

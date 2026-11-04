@@ -1,0 +1,17 @@
+{
+    "scenario": "drift",
+    "detector_name": "EWMAChart",
+    "best_macro_f1": 0.5494451505229454,
+    "best_params": {
+        "phi_b": 0.00445834987842466,
+        "scaler_detectors": "robust",
+        "scaler_model": "standard",
+        "rf_n_estimators": 161,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 8,
+        "rf_min_samples_leaf": 12,
+        "rf_max_features": null,
+        "rf_bootstrap": false
+    },
+    "fixed_catch24_window_size": null
+}

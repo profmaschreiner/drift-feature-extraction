@@ -1,0 +1,11 @@
+run,fold,test_bases,RF
+controle_c2raw_w_waist,0,"[0, 1]",0.6917835876367907
+controle_c2raw_w_waist,1,"[2, 3]",0.6767962276673255
+controle_c2raw_w_waist,2,"[4, 5]",0.7006900861960935
+controle_c2raw_w_waist,3,"[6, 7]",0.676571909389787
+controle_c2raw_w_waist,4,"[8, 9]",0.7655303705500595
+controle_c2raw_w_waist,5,"[10, 11]",0.7140267205100591
+controle_c2raw_w_waist,6,"[12, 13]",0.6786114102203723
+controle_c2raw_w_waist,7,"[14, 15]",0.6662795314798688
+controle_c2raw_w_waist,8,"[16, 17]",0.6706387294272953
+controle_c2raw_w_waist,9,"[18, 19]",0.6636197054397944

@@ -1,0 +1,25 @@
+{
+    "cenario": "C3",
+    "controle": "EWMA_VAR",
+    "detector_referencia": "HDDMAverage",
+    "fonte_hiperparametros": "datasetsNew/pamap2D/resultados_catch24_drift_hand/catch24_drift/HDDMAverage/resultado_otimizacao.json",
+    "phi_b": 6.510170445855456e-05,
+    "horizonte_h": 2280,
+    "lambda_0": 0.0004385964912280702,
+    "fator_escolhido": 1.0,
+    "lambda_escolhido": 0.0004385964912280702,
+    "janela_catch24": 130,
+    "params_rf": {
+        "scaler_model": "minmax",
+        "rf_n_estimators": 179,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 9,
+        "rf_min_samples_leaf": 7,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "scaler_detectors": "robust",
+    "f1_algorithm1": 0.8399549261977184,
+    "protocolo": "nao aninhado (mesmo do experimento original)",
+    "macro_f1": 0.7875730594998014
+}

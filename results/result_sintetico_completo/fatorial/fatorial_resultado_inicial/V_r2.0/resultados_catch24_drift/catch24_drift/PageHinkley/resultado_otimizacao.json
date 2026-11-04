@@ -1,0 +1,17 @@
+{
+    "scenario": "catch24_drift",
+    "detector_name": "PageHinkley",
+    "best_macro_f1": 0.9934557827814356,
+    "best_params": {
+        "phi_b": 1.7825523120718316e-05,
+        "scaler_detectors": "standard",
+        "scaler_model": "standard",
+        "rf_n_estimators": 195,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 18,
+        "rf_min_samples_leaf": 5,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": false
+    },
+    "fixed_catch24_window_size": 50
+}

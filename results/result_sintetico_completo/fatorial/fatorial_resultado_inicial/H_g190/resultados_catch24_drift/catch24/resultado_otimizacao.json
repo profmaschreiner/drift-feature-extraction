@@ -1,0 +1,16 @@
+{
+    "scenario": "catch24",
+    "detector_name": null,
+    "best_macro_f1": 0.5161576554442387,
+    "best_params": {
+        "window_size": 110,
+        "scaler_model": "robust",
+        "rf_n_estimators": 90,
+        "rf_max_depth": 3,
+        "rf_min_samples_split": 12,
+        "rf_min_samples_leaf": 8,
+        "rf_max_features": "sqrt",
+        "rf_bootstrap": true
+    },
+    "fixed_catch24_window_size": null
+}

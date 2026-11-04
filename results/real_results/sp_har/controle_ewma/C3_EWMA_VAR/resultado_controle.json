@@ -1,0 +1,25 @@
+{
+    "cenario": "C3",
+    "controle": "EWMA_VAR",
+    "detector_referencia": "SEED",
+    "fonte_hiperparametros": "datasetsNew/sw_sp/geotec_sp/resultados_catch24_drift/catch24_drift/SEED/resultado_otimizacao.json",
+    "phi_b": 0.0022328246493424856,
+    "horizonte_h": 117,
+    "lambda_0": 0.008547008547008548,
+    "fator_escolhido": 0.5,
+    "lambda_escolhido": 0.004273504273504274,
+    "janela_catch24": 130,
+    "params_rf": {
+        "scaler_model": "robust",
+        "rf_n_estimators": 64,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 13,
+        "rf_min_samples_leaf": 11,
+        "rf_max_features": null,
+        "rf_bootstrap": false
+    },
+    "scaler_detectors": "robust",
+    "f1_algorithm1": 0.7353063778051033,
+    "protocolo": "nao aninhado (mesmo do experimento original)",
+    "macro_f1": 0.7058261210944293
+}

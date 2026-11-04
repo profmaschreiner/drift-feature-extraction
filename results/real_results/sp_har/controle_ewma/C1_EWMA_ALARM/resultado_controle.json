@@ -1,0 +1,25 @@
+{
+    "cenario": "C1",
+    "controle": "EWMA_ALARM",
+    "detector_referencia": "PageHinkley",
+    "fonte_hiperparametros": "datasetsNew/sw_sp/geotec_sp/resultados_catch24_drift/drift/PageHinkley/resultado_otimizacao.json",
+    "phi_b": 0.013218414190757857,
+    "horizonte_h": 29,
+    "lambda_0": 0.034482758620689655,
+    "fator_escolhido": 0.5,
+    "lambda_escolhido": 0.017241379310344827,
+    "janela_catch24": null,
+    "params_rf": {
+        "scaler_model": "robust",
+        "rf_n_estimators": 123,
+        "rf_max_depth": 5,
+        "rf_min_samples_split": 11,
+        "rf_min_samples_leaf": 3,
+        "rf_max_features": null,
+        "rf_bootstrap": true
+    },
+    "scaler_detectors": "standard",
+    "f1_algorithm1": 0.6410228126865694,
+    "protocolo": "nao aninhado (mesmo do experimento original)",
+    "macro_f1": 0.6530176992782422
+}
