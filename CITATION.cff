@@ -1,3 +1,42 @@
 cff-version: 1.2.0
 message: "If you use this code or the synthetic datasets, please cite the paper below."
 title: "Using Concept Drift Detectors as Feature Extractors for Sequential Data"
+type: software
+authors:
+  - family-names: "Schreiner"
+    given-names: "Marcos A."
+    affiliation: "Federal University of Paraná (UFPR)"
+  - family-names: "Escribano"
+    given-names: "Renan A. N. G."
+    affiliation: "Federal University of Paraná (UFPR)"
+  - family-names: "Oliveira"
+    name-particle: "de"
+    given-names: "Luiz Eduardo S."
+    affiliation: "Federal University of Paraná (UFPR)"
+  - family-names: "Gomes"
+    given-names: "Heitor"
+    affiliation: "Victoria University of Wellington (VUW)"
+repository-code: "https://github.com/profmaschreiner/drift-feature-extraction"
+license: MIT
+keywords:
+  - concept drift
+  - drift detectors
+  - feature extraction
+  - sequential data
+  - time series classification
+  - catch22
+preferred-citation:
+  type: article
+  title: "Using Concept Drift Detectors as Feature Extractors for Sequential Data"
+  authors:
+    - family-names: "Schreiner"
+      given-names: "Marcos A."
+    - family-names: "Escribano"
+      given-names: "Renan A. N. G."
+    - family-names: "Oliveira"
+      name-particle: "de"
+      given-names: "Luiz Eduardo S."
+    - family-names: "Gomes"
+      given-names: "Heitor"
+  journal: "Neurocomputing"
+  status: submitted
